@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home"; // you already have this
 import Signup from "./pages/Signup";
 
+import CreateAccountPage from "./pages/CreateAccountPage";
+
 import "./App.css";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
@@ -26,7 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="" />
+        <Route path="/createaccount" element={<CreateAccountPage />} />
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />
       </Routes>

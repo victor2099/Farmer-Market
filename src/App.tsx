@@ -1,9 +1,10 @@
+import Home from "./pages/Home";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <p className="text-blue-500">my name</p>
+      <p className="text-blue-500 text-7xl font-dm-sans">my name</p>
     </>
   );
 }

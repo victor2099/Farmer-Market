@@ -20,9 +20,9 @@ function App() {
   return (
     <Router>
       {/* Navigation */}
-      <nav className="p-4 bg-gray-100 flex gap-4">
+      {/*<nav className="p-4 bg-gray-100 flex gap-4">
         <Link to="/">Home</Link>
-      </nav>
+      </nav>*/}
 
       {/* Routes */}
       <Routes>

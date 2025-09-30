@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 type AuthenticateForm = {
   firstName: string;
@@ -22,8 +23,8 @@ function CreateAccountInputField() {
   });
 
   const [isSignUp, setIsSignUp] = useState(false);
-  const [formInputError, setFormInputError ] = useState<string | null>(null);
-   const [success, setSuccess] = useState<string | null>(null);
+  const [formInputError, setFormInputError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -36,30 +37,32 @@ function CreateAccountInputField() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-   // Check required fields manually
-  if (
-    !formData.firstName ||
-    !formData.lastName ||
-    !formData.phoneNumber ||
-    !formData.email ||
-    !formData.password ||
-    !formData.confirmPassword ||
-    !formData.terms
-  ) {
-    showError("All fields are required and Terms must be accepted!");
-    return;
-  }
 
-  // Extra validation
-  if (formData.password !== formData.confirmPassword) {
-    showError("Passwords do not match!");
-    return;
-  }
+    const navigate = useNavigate();
+    // Check required fields manually
+    if (
+      !formData.firstName ||
+      !formData.lastName ||
+      !formData.phoneNumber ||
+      !formData.email ||
+      !formData.password ||
+      !formData.confirmPassword ||
+      !formData.terms
+    ) {
+      showError("All fields are required and Terms must be accepted!");
+      return;
+    }
 
-  
+    // Extra validation
+    if (formData.password !== formData.confirmPassword) {
+      showError("Passwords do not match!");
+      return;
+    }
+
     showSuccess("Account created successfully!");
 
-    
+    navigate("/dashboard");
+
     setFormData({
       firstName: "",
       lastName: "",
@@ -70,12 +73,11 @@ function CreateAccountInputField() {
       terms: false,
     });
   }
-  
 
   const showError = (message: string) => {
-    setFormInputError(message); 
+    setFormInputError(message);
     setTimeout(() => setFormInputError(null), 5000); // Clear after 5 seconds
-    };
+  };
 
   const showSuccess = (message: string) => {
     setSuccess(message);
@@ -180,18 +182,15 @@ function CreateAccountInputField() {
             onChange={handleChange}
           />
           <span>
-            I Agree To The{" "}
-            <span className="text-green-600">Terms Of User</span>
+            I Agree To The <span className="text-green-600">Terms Of User</span>
           </span>
         </div>
 
         {formInputError && (
-          <div className="text-red-500 text-sm">
-            {formInputError}
-          </div>
+          <div className="text-red-500 text-sm">{formInputError}</div>
         )}
 
-          {success && (
+        {success && (
           <div className="text-green-600 text-sm bg-green-100 border border-green-300 p-2 rounded">
             {success}
           </div>

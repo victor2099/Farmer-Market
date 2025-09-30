@@ -1,13 +1,21 @@
+import africanFarmerImage from "../assets/photorealistic-view-african-people-harvesting-vegetables-grains 1.svg"
+import logo from "../assets/Logo 2.png";
 import CreateAccountInputField from "../components/CreateAccountInputField"
 
 function CreateAccountPage() {
   return (
-    <div className=" grid justify-center grid-cols-2 h-screen py-5 px-10 gap-10">
-        <div className="relative w-full h-full ">
-        <img src="src/assets/photorealistic-view-african-people-harvesting-vegetables-grains 1.jpg" className="w-full h-full object-cover filter contrast-105 saturate-110" alt="African farmer" />
-        <div className="absolute inset-0 bg-green-300/20"></div>
-        <div className="absolute top-5 left-5 w-25">
-            <img src="src/assets/Logo 2.png" className="" alt="farmer logo" />
+    <div className="font-dm-sans grid h-screen w-full grid-cols-1 md:grid-cols-2 gap-5 text-[10px] sm:text-[14px] md:text-[16px] md:mb-[20px] px-3">
+        <div className="hidden md:block md:relative h-full w-full md:h-screen ">  
+        <img 
+        src={africanFarmerImage} 
+        className="  w-full h-full object-cover " 
+        alt="African farmer" />
+        <div 
+        className="absolute top-2 left-1 md:left-3 ">
+        <img 
+        src={logo} 
+        className=" w-30 h-10  object-contain" 
+        alt="farmer logo" />
         </div>
     </div>
      

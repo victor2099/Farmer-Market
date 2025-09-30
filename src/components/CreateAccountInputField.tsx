@@ -85,7 +85,7 @@ function CreateAccountInputField() {
 
   return (
     <div className="pt-4 md:pt-3 flex flex-col h-full">
-      <h1 className=" text-green font-bold pb-2 md:mb-4 text-[12px] sm:text-[18px] md:text[24px]">Create Account</h1>
+      <h1 className=" text-green font-bold pb-2 md:mb-1 text-[12px] sm:text-[18px] md:text[24px]">Create Account</h1>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-2">
         <div className="flex flex-col gap-1">

@@ -4,7 +4,7 @@ import CreateAccountInputField from "../components/CreateAccountInputField"
 
 function CreateAccountPage() {
   return (
-    <div className="font-dm-sans grid h-screen w-full grid-cols-1 md:grid-cols-2 gap-5 text-[10px] sm:text-[14px] md:text-[16px] md:mb-[20px] px-3">
+    <div className="box-border pb-10   font-dm-sans grid h-screen w-full grid-cols-1 md:grid-cols-2 gap-5 text-[10px] sm:text-[14px] md:text-[16px]  px-3">
         <div className="hidden md:block md:relative h-full w-full md:h-screen ">  
         <img 
         src={africanFarmerImage} 

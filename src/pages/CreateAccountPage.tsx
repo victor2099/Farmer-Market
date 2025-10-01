@@ -12,7 +12,7 @@ function CreateAccountPage() {
         className=" relative bg-cover bg-center bg-no-repeat h-screen w-full object-cover hidden md:block" 
         style={{backgroundImage: `url(${africanFarmerImage})`}}>
          <img src={logo} 
-         className="absolute mt-5  w-30 md:w-40  md:mt-10 h-10  pl-5   object-contain" 
+         className="absolute mt-5  w-30 md:w-50  md:mt-10 h-10  pl-5   object-contain" 
          alt="logo" />
         </div>
 

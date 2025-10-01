@@ -94,7 +94,7 @@ function CreateAccountInputField() {
           </label>
           <input
             type="text"
-            name="firstName" // ✅ must match state key
+            name="firstName"
             placeholder="Enter First Name"
             value={formData.firstName}
             onChange={handleChange}
@@ -176,7 +176,7 @@ function CreateAccountInputField() {
           <input
             type="checkbox"
             name="terms"
-            checked={formData.terms} // ✅ use checked not value
+            checked={formData.terms} 
             onChange={handleChange}
           />
           <span>

@@ -1,4 +1,4 @@
-import africanFarmerImage from "../assets/photorealistic-view-african-people-harvesting-vegetables-grains 1.svg"
+import africanFarmerImage from "../assets/photorealistic-view-african-people-harvesting-vegetables-grains 1.jpg"
 import logo from "../assets/Logo 2.png";
 import CreateAccountInputField from "../components/CreateAccountInputField"
 

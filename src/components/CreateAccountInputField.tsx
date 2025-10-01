@@ -84,10 +84,10 @@ function CreateAccountInputField() {
   };
 
   return (
-    <div className="pt-4 md:pt-3 flex flex-col h-full">
-      <h1 className=" text-green font-bold pb-2 md:mb-1 text-[12px] sm:text-[18px] md:text[24px]">Create Account</h1>
+    <div className="mt-8 md:mt-0 md:pt-3 flex flex-col h-full">
+      <h1 className=" text-green-2 font-bold pb-2 md:mb-1 text-[20px] md:text[32px]">Create Account</h1>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-1">
         <div className="flex flex-col gap-1">
           <label htmlFor="firstName" className="font-medium">
             First Name
@@ -98,7 +98,7 @@ function CreateAccountInputField() {
             placeholder="Enter First Name"
             value={formData.firstName}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1  focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -112,7 +112,7 @@ function CreateAccountInputField() {
             placeholder="Enter Last Name"
             value={formData.lastName}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1  focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -126,7 +126,7 @@ function CreateAccountInputField() {
             placeholder="Enter Phone Number"
             value={formData.phoneNumber}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1  focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -140,7 +140,7 @@ function CreateAccountInputField() {
             placeholder="Enter Email Address"
             value={formData.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1  focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -154,7 +154,7 @@ function CreateAccountInputField() {
             placeholder="Enter Password"
             value={formData.password}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1  focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -168,11 +168,11 @@ function CreateAccountInputField() {
             placeholder="Confirm Password"
             value={formData.confirmPassword}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1  focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
           />
         </div>
 
-        <div className="flex flex-row gap-2 items-center">
+        <div className="flex flex-row gap-1 items-center">
           <input
             type="checkbox"
             name="terms"
@@ -181,7 +181,7 @@ function CreateAccountInputField() {
           />
           <span>
             I Agree To The{" "}
-            <span className="text-green-600">Terms Of User</span>
+            <span className="text-green-2">Terms Of User</span>
           </span>
         </div>
 
@@ -192,22 +192,22 @@ function CreateAccountInputField() {
         )}
 
           {success && (
-          <div className="text-green-600 text-sm bg-green-100 border border-green-300 px-2 py-1  rounded">
+          <div className="text-green-600 text-sm bg-green-100 border border-green-300 px-2 py-1 rounded">
             {success}
           </div>
         )}
 
-        <div className="flex items-center flex-row gap-2 pt-1">
+        <div className="flex items-center flex-row gap-3 pt-3">
           <button
             type="submit"
-            className="font-medium px-2 py-1 rounded-md border-2 border-green-600 hover:bg-green-600 hover:text-white transition duration-300"
+            className="font-medium px-6 py-1.5 rounded-md border-2 border-green-600 hover:bg-green-600 hover:text-white transition duration-300"
           >
             Sign Up
           </button>
           <button
             type="button"
             onClick={() => setIsSignUp(false)}
-            className=" font-medium px-2 py-1 rounded-md border-2 border-green-600 hover:bg-green-600 hover:text-white transition duration-300"
+            className=" font-medium px-6 py-1.5  rounded-md border-2 border-green-2 hover:bg-green-2 hover:text-white transition duration-300"
           >
             Sign In
           </button>

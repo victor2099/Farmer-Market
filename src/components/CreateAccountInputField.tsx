@@ -172,7 +172,7 @@ function CreateAccountInputField() {
           />
         </div>
 
-        <div className="flex flex-row gap-1 items-center">
+        <div className="flex flex-row gap-1 items-center mt-2">
           <input
             type="checkbox"
             name="terms"
@@ -200,14 +200,14 @@ function CreateAccountInputField() {
         <div className="flex items-center flex-row gap-3 pt-3">
           <button
             type="submit"
-            className="font-medium px-6 py-1.5 rounded-md border-2 border-green-600 hover:bg-green-600 hover:text-white transition duration-300"
+            className="font-medium px-8 py-1.5 rounded-md border-2 border-green-600 hover:bg-green-600 hover:text-white transition duration-300"
           >
             Sign Up
           </button>
           <button
             type="button"
             onClick={() => setIsSignUp(false)}
-            className=" font-medium px-6 py-1.5  rounded-md border-2 border-green-2 hover:bg-green-2 hover:text-white transition duration-300"
+            className=" font-medium px-8 py-1.5  rounded-md border-2 border-green-2 hover:bg-green-2 hover:text-white transition duration-300"
           >
             Sign In
           </button>

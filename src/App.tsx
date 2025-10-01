@@ -7,6 +7,7 @@ import CreateAccountPage from "./pages/CreateAccountPage";
 
 import "./App.css";
 import FarmBusinessDetails from "./pages/FarmBusinessDetails";
+import VerificationDetails from "./pages/VerificationDetails";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
 //function About() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/createaccount" element={<CreateAccountPage />} />
         <Route path="/businessdetails" element={< FarmBusinessDetails />} />
+        <Route path="verifyd" element={ < VerificationDetails /> }/>
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />
        

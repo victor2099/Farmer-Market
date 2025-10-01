@@ -46,10 +46,9 @@ function BusinessDetails() {
     }
 
   return (
-    <>
-      <div className="mt-8 md:mt-0 mb-3 text-[#20B658] text-[20px] font-bold md:text-[32px]">
-        Farm/Business Details
-      </div>
+    <div className="mt-8 md:mt-0 md:pt-0 flex flex-col h-full">
+      <h1 className=" text-green-2 font-bold pb-2 md:mb-1 text-[20px] md:text-[32px]">Farm/Business Details</h1>
+
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         {/* Business Name */}
@@ -132,7 +131,7 @@ function BusinessDetails() {
           Continue
         </button>
       </form>
-    </>
+    </div>
   );
 }
 

@@ -60,7 +60,7 @@ function BusinessDetails() {
             type="text"
             name="businessName"
             placeholder="Enter Business Name"
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-500"
             value={formData.businessName}
             onChange={handleChange}
           />
@@ -77,7 +77,7 @@ function BusinessDetails() {
             placeholder="Enter Farm/Business Location"
             onChange={handleChange}
             value={formData.businessLocation}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-500"
           />
         </div>
 
@@ -91,7 +91,7 @@ function BusinessDetails() {
             name="scaleBusiness"
             value={formData.scaleBusiness}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-500"
           >
             <option value="">Select Scale Of Business</option>
             <option value="small">Small</option>
@@ -110,7 +110,7 @@ function BusinessDetails() {
             name="typeProduce"
             value={formData.typeProduce}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-500"
           >
             <option value="">Select Type of Produce</option>
             <option value="vegetables">Vegetables</option>
@@ -126,7 +126,7 @@ function BusinessDetails() {
         {/* Submit */}
         <button
           type="submit"
-          className="text-[#20B658] border border-[#20B658] md:w-[300px] md:mx-auto py-2 rounded-md hover:text-white hover:bg-[#20B658] transition-colors mt-4"
+          className="text-[#20B658] border border-[#20B658] md:w-[300px] md:mx-auto py-2 rounded-md hover:text-white hover:bg-[#20B658] transition-colors mt-4 cursor-pointer"
         >
           Continue
         </button>

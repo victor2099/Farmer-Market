@@ -98,7 +98,7 @@ function CreateAccountInputField() {
             placeholder="Enter First Name"
             value={formData.firstName}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -112,7 +112,7 @@ function CreateAccountInputField() {
             placeholder="Enter Last Name"
             value={formData.lastName}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -126,7 +126,7 @@ function CreateAccountInputField() {
             placeholder="Enter Phone Number"
             value={formData.phoneNumber}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -140,7 +140,7 @@ function CreateAccountInputField() {
             placeholder="Enter Email Address"
             value={formData.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -154,7 +154,7 @@ function CreateAccountInputField() {
             placeholder="Enter Password"
             value={formData.password}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -168,7 +168,7 @@ function CreateAccountInputField() {
             placeholder="Confirm Password"
             value={formData.confirmPassword}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-2"
+            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -200,14 +200,14 @@ function CreateAccountInputField() {
         <div className="flex items-center flex-row gap-3 pt-3">
           <button
             type="submit"
-            className="font-medium px-8 py-1.5 rounded-md border-2 border-green-600 hover:bg-green-600 hover:text-white transition duration-300"
+            className="cursor-pointer font-medium px-8 py-1.5 rounded-md border-2 border-green-600 hover:bg-green-2 hover:text-white transition duration-300"
           >
             Sign Up
           </button>
           <button
             type="button"
             onClick={() => setIsSignUp(false)}
-            className=" font-medium px-8 py-1.5  rounded-md border-2 border-green-2 hover:bg-green-2 hover:text-white transition duration-300"
+            className=" cursor-pointer font-medium px-8 py-1.5 rounded-md border-2 border-green-600 hover:bg-green-2 hover:text-white transition duration-300"
           >
             Sign In
           </button>

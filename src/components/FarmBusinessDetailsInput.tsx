@@ -91,7 +91,7 @@ function BusinessDetails() {
             name="scaleBusiness"
             value={formData.scaleBusiness}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-500"
+            className="w-full text-gray-500 border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-500"
           >
             <option value="">Select Scale Of Business</option>
             <option value="small">Small</option>
@@ -110,7 +110,7 @@ function BusinessDetails() {
             name="typeProduce"
             value={formData.typeProduce}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-500"
+            className="w-full text-gray-500 border border-gray-300 rounded-md px-2 py-1 focus:outline-none cursor-pointer focus:ring-2 focus:ring-green-500"
           >
             <option value="">Select Type of Produce</option>
             <option value="vegetables">Vegetables</option>

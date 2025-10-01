@@ -62,8 +62,8 @@ const BankingPaymentInput = () => {
 
   return (
     <div className="mt-8 md:mt-0 md:pt-0  flex flex-col h-full">
-      <h1 className="text-green-600 font-bold pb-2 mb-5 text-[20px] md:text-[32px]">
-        Farm/Business Details
+      <h1 className="text-[:#20B658] font-bold pb-2 mb-5 text-[20px] md:text-[32px]">
+        Banking/Payment Details
       </h1>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">

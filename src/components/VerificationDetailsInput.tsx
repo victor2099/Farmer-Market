@@ -49,7 +49,7 @@ function VerificationDetailsInput() {
             type="file"
             accept=".pdf,.doc,.docx,.jpg,.png"
             onChange={handleIdFileChange}
-            className="text-sm border cursor-pointer border-gray-300 rounded-md px-2 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 w-full
+            className="text-sm border cursor-pointer border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-green-400 w-full
                        file:bg-gray-200 file:border-0 file:rounded-md file:px-3 file:py-2 file:text-sm file:font-light file:text-gray-700 hover:file:bg-gray-400 file:cursor-pointer"
           />
           {idFile && (
@@ -67,7 +67,7 @@ function VerificationDetailsInput() {
             type="file"
             accept=".pdf,.doc,.docx,.jpg,.png"
             onChange={handleCacFileChange}
-            className="text-sm cursor-pointer border border-gray-300 rounded-md px-2 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 w-full
+            className="text-sm cursor-pointer border border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-green-400 w-full
                        file:bg-gray-200 file:border-0 file:rounded-md file:px-3 file:py-2 file:text-sm file:font-light file:text-gray-700 hover:file:bg-gray-400 file:cursor-pointer"
           />
           {cacFile && (

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link } from "react-router-dom";
 
 type AuthenticateForm = {
   firstName: string;
@@ -85,7 +86,7 @@ function CreateAccountInputField() {
 
   return (
     <div className="mt-8 md:mt-0 md:pt-3 flex flex-col h-full">
-      <h1 className=" text-green-2 font-bold pb-2 mb-5 text-[20px] md:text[32px]">Create Account</h1>
+      <h1 className="  text-[#20B658] font-bold pb-2 mb-5 text-[20px] md:text[32px]">Create Account</h1>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-1">
         <div className="flex flex-col gap-1">
@@ -200,17 +201,21 @@ function CreateAccountInputField() {
         <div className="flex items-center flex-row gap-3 pt-3">
           <button
             type="submit"
-            className="cursor-pointer font-medium px-8 py-1.5 rounded-md border-2 border-green-600 hover:bg-[#20B658] hover:text-white transition duration-300"
+            className=" text-[#20B658] cursor-pointer font-medium px-8 py-1.5 rounded-md border-2 border-green-600 hover:bg-[#20B658] hover:text-white transition duration-300"
           >
             Sign Up
           </button>
+
+           <Link to="/signin">
           <button
             type="button"
             onClick={() => setIsSignUp(false)}
-            className=" cursor-pointer font-medium px-8 py-1.5 rounded-md border-2 border-green-600 hover:bg-[#20B658] hover:text-white transition duration-300"
+            className=" text-[#20B658] cursor-pointer font-medium px-8 py-1.5 rounded-md border-2 border-green-600 hover:bg-[#20B658] hover:text-white transition duration-300"
           >
             Sign In
+           
           </button>
+           </Link>
         </div>
       </form>
     </div>

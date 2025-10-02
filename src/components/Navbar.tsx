@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             </button>
           </Link>
           <Link to="/login">
-            <button className="bg-sec text-black text-sm font-bold py-3 px-5 rounded-md hover:bg-sec2">
+            <button className="block lg:hidden bg-sec text-black text-sm font-bold py-3 px-5 rounded-md hover:bg-sec2">
               Log In
             </button>
           </Link>
@@ -123,7 +123,7 @@ const Navbar: React.FC = () => {
             </Link>
             <Link to="/login" onClick={() => setIsOpen(false)}>
               <button className="w-full bg-sec text-black text-sm font-bold py-3 px-5 rounded-md hover:bg-sec2">
-                Log In
+                Login In
               </button>
             </Link>
           </div>

@@ -47,7 +47,7 @@ function BusinessDetails() {
 
   return (
     <div className="mt-8 md:mt-0 md:pt-0 flex flex-col h-full">
-      <h1 className=" text-green-2 font-bold pb-2 mb-5 text-[20px] md:text-[32px]">Farm/Business Details</h1>
+      <h1 className=" text-green-btn font-bold pb-2 mb-5 text-[20px] md:text-[32px]">Farm/Business Details</h1>
 
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">

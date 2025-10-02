@@ -4,7 +4,7 @@ import BuyerRegInput from "../components/BuyerRegInput";
 
 const BuyerReg = () => {
   return (
-<div className="font-dm-sans bg-light grid justify-center h-full w-full md:h-[100vh] md:py-5 px-10 md:grid-cols-[1fr_2fr] gap-3 md:gap-5">
+<div className="font-dm-sans bg-light grid justify-center h-full w-full md:h-screen  md:grid-cols-[1fr_1fr] max-w-7xl mx-auto ">
 
      <div 
   className="relative bg-contain bg-no-repeat bg-center h-full w-full hidden md:block"

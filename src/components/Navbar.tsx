@@ -44,11 +44,19 @@ const Navbar: React.FC = () => {
           </NavLink>
         </ul>
 
-        <div>
-         <Link to="/createaccount"> <button className="border-0 outline-0 cursor-pointer bg-sec text-black text-sm font-bold py-3 px-5 rounded-md hover:bg-sec2">
-            Sign Up / Log In
+        <div className="flex items-center flex-row gap-3">
+         <Link to="/createaccount"> <button className=" border-0 outline-0 cursor-pointer bg-sec text-black text-sm font-bold py-3 px-3 rounded-md hover:bg-sec2">
+            Sign Up 
           </button>
           </Link>
+
+           <Link to="/signin"> <button className="border-0 outline-0 cursor-pointer bg-sec text-black text-sm font-bold py-3 px-3 rounded-md hover:bg-sec2">
+            Log In
+          </button>
+          </Link>
+
+
+          
         </div>
       </div>
     </nav>

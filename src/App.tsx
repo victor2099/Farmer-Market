@@ -16,6 +16,7 @@ import VerificationDetails from "./pages/VerificationDetails";
 import BankingPayment from "./pages/BankingPayment";
 import SignPage from "./pages/SigninPage";
 import BuyerReg from "./pages/BuyerReg";
+import VerificationCode from "./pages/VerificationCode";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
 //function About() {
@@ -50,6 +51,8 @@ function App() {
         <Route path="bankingpayment" element={<BankingPayment />} />
         <Route path="signin" element={<SignPage />} />
         <Route path="buyerreg" element={<BuyerReg/>} />
+        <Route path="verificationcode" element={<VerificationCode/>} />
+
 
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />

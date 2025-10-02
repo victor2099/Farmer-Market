@@ -6,6 +6,8 @@ import Signup from "./pages/Signup";
 import CreateAccountPage from "./pages/CreateAccountPage";
 
 import "./App.css";
+import BuyerDashboard from "./pages/BuyerDashboard";
+import Overview from "./components/dashboard-components/Overview";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
 //function About() {
@@ -29,6 +31,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/createaccount" element={<CreateAccountPage />} />
+        <Route path="/buyerdashboard" element={<BuyerDashboard />}>
+          <Route index element={<Overview />} />
+          <Route path="overview" element={<Overview />} />
+        </Route>
+
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />
       </Routes>

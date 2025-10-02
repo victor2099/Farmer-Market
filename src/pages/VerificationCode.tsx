@@ -37,13 +37,13 @@ const VerificationCode = () => {
   return (
     <div className="flex items-center justify-center min-h-screen px-4">
       <div className="w-full max-w-md text-center">
-        {/* Logo */}
+
         <div className="flex justify-center mb-6">
             <img src={logo}
             className="h-10 md:h-14 object-contain" />
         </div>
 
-        {/* Heading */}
+        
         <h1 className="text-2xl md:text-3xl font-bold text-green-btn mb-2">
           Enter Verification Code
         </h1>
@@ -52,7 +52,7 @@ const VerificationCode = () => {
           <span className="font-medium">+234 80406020150</span>
         </p>
 
-        {/* Input Boxes */}
+        
         <form onSubmit={handleSubmit} className="flex flex-col items-center gap-6">
           <div className="flex gap-3 justify-center">
             {code.map((digit, index) => (

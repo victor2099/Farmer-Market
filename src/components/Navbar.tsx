@@ -60,6 +60,13 @@ const Navbar: React.FC = () => {
               Log In
             </button>
           </Link>
+
+          <Link to="/signin">
+            {" "}
+            <button className="border-0 outline-0 cursor-pointer bg-sec text-black text-sm font-bold py-3 px-3 rounded-md hover:bg-sec2">
+              Log In
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}

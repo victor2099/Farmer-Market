@@ -1,6 +1,6 @@
 // App.jsx
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home"; // you already have this
 import Signup from "./pages/Signup";
 import Dashboard from "../src/pages/Farmerdashboard";
@@ -47,6 +47,7 @@ function App() {
         <Route path="/businessdetails" element={<FarmBusinessDetails />} />
         <Route path="verifyd" element={<VerificationDetails />} />
         <Route path="bankingpayment" element={<BankingPayment />} />
+        <Route path="farmer" element={<Dashboard />} />
         <Route path="signin" element={<SignPage />} />
 
         {/* Catch-all */}

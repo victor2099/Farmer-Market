@@ -16,6 +16,7 @@ import VerificationDetails from "./pages/VerificationDetails";
 import BankingPayment from "./pages/Signup";
 import SignPage from "./pages/SigninPage";
 import BuyerReg from "./pages/BuyerReg";
+import SuccessPage from "./pages/SuccessPage";
 
 import VerificationCode from "./pages/VerificationCode";
 
@@ -53,6 +54,7 @@ function App() {
         <Route path="signin" element={<SignPage />} />
         <Route path="buyerreg" element={<BuyerReg/>} />
         <Route path="verificationcode" element={<VerificationCode/>} />
+        <Route path="successpage" element={<SuccessPage/>} />
 
 
         {/* Catch-all */}

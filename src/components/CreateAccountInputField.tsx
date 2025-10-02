@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link } from "react-router-dom";
 
 type AuthenticateForm = {
   firstName: string;
@@ -84,21 +85,21 @@ function CreateAccountInputField() {
   };
 
   return (
-    <div className="pt-4 flex flex-col">
-      <h2 className="text-green-600 font-bold pb-5">Create Account</h2>
+    <div className="mt-8 md:mt-0 md:pt-3 flex flex-col h-full">
+      <h1 className="  text-[#20B658] font-bold pb-2 mb-5 text-[16px] sm:text-[20px] md:text-[32px]">Create Account</h1>
 
-      <form onSubmit={handleSubmit} className="grow flex flex-col gap-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-1 text-[12px] md:text-[14px] ">
         <div className="flex flex-col gap-1">
           <label htmlFor="firstName" className="font-medium">
             First Name
           </label>
           <input
             type="text"
-            name="firstName" // ✅ must match state key
+            name="firstName"
             placeholder="Enter First Name"
             value={formData.firstName}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-2 focus:outline-none text-[12px] sm:text-[14px]  cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -112,7 +113,7 @@ function CreateAccountInputField() {
             placeholder="Enter Last Name"
             value={formData.lastName}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-2 focus:outline-none text-[12px] sm:text-[14px]  cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -126,7 +127,7 @@ function CreateAccountInputField() {
             placeholder="Enter Phone Number"
             value={formData.phoneNumber}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-2 focus:outline-none text-[12px] sm:text-[14px]  cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -140,7 +141,7 @@ function CreateAccountInputField() {
             placeholder="Enter Email Address"
             value={formData.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-2 focus:outline-none text-[12px] sm:text-[14px]  cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -154,7 +155,7 @@ function CreateAccountInputField() {
             placeholder="Enter Password"
             value={formData.password}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-2 focus:outline-none text-[12px] sm:text-[14px] cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
@@ -168,20 +169,20 @@ function CreateAccountInputField() {
             placeholder="Confirm Password"
             value={formData.confirmPassword}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded-md px-2 py-2 focus:outline-none text-[12px] sm:text-[14px]  cursor-pointer focus:ring-2 focus:ring-green-2"
           />
         </div>
 
-        <div className="flex flex-row gap-2 items-center">
+        <div className="flex flex-row gap-1 items-center mt-2 text-[12px] sm:text-[14px] ">
           <input
             type="checkbox"
             name="terms"
-            checked={formData.terms} // ✅ use checked not value
+            checked={formData.terms} 
             onChange={handleChange}
           />
           <span>
             I Agree To The{" "}
-            <span className="text-green-600">Terms Of User</span>
+            <span className="text-green-2">Terms Of User</span>
           </span>
         </div>
 
@@ -192,25 +193,29 @@ function CreateAccountInputField() {
         )}
 
           {success && (
-          <div className="text-green-600 text-sm bg-green-100 border border-green-300 p-2 rounded">
+          <div className="text-green-600 text-sm bg-green-100 border border-green-300 px-2 py-1 rounded">
             {success}
           </div>
         )}
 
-        <div className="flex flex-row gap-4 pt-4">
+        <div className="flex items-center flex-row gap-3 pt-3">
           <button
             type="submit"
-            className="text-[12px] whitespace-nowrap font-medium px-5 py-1 rounded-md border-2 border-green-600 hover:bg-green-600 hover:text-white transition duration-300"
+            className=" text-[#20B658] cursor-pointer font-medium px-8 py-1.5 rounded-md border-2 border-green-600 hover:bg-[#20B658] hover:text-white transition duration-300"
           >
             Sign Up
           </button>
+
+           <Link to="/signin">
           <button
             type="button"
             onClick={() => setIsSignUp(false)}
-            className="text-[12px] whitespace-nowrap font-medium px-5 py-1 rounded-md border-2 border-green-600 hover:bg-green-600 hover:text-white transition duration-300"
+            className=" text-[#20B658] cursor-pointer font-medium px-8 py-1.5 rounded-md border-2 border-green-600 hover:bg-[#20B658] hover:text-white transition duration-300"
           >
             Sign In
+           
           </button>
+           </Link>
         </div>
       </form>
     </div>

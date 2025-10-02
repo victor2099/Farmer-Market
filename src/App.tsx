@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 import Home from "./pages/Home"; // you already have this
-import Signup from "./pages/Signup";
+import Signup from "./components/BuyerRegInput";
 import Dashboard from "../src/pages/Farmerdashboard";
 import CreateAccountPage from "./pages/CreateAccountPage";
 
@@ -15,6 +15,7 @@ import FarmBusinessDetails from "./pages/FarmBusinessDetails";
 import VerificationDetails from "./pages/VerificationDetails";
 import BankingPayment from "./pages/BankingPayment";
 import SignPage from "./pages/SigninPage";
+import BuyerReg from "./pages/BuyerReg";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
 //function About() {
@@ -48,6 +49,7 @@ function App() {
         <Route path="verifyd" element={<VerificationDetails />} />
         <Route path="bankingpayment" element={<BankingPayment />} />
         <Route path="signin" element={<SignPage />} />
+        <Route path="buyerreg" element={<BuyerReg/>} />
 
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />

@@ -5,7 +5,7 @@ import VerificationDetailsInput from "../components/VerificationDetailsInput"
 
 function VerificationDetails() {
   return (
-    <div className="font-dm-sans grid justify-center  h-full w-full md:grid-cols-[repeat(2,1fr)] gap-3 md:gap-10  px-3 ">
+    <div className=" bg-light font-dm-sans grid justify-center  h-full w-full md:grid-cols-[repeat(2,1fr)] gap-3 md:gap-10  px-3 md:pr-20  ">
       
         <div 
         className=" relative bg-cover  bg-no-repeat h-screen w-full object-cover hidden md:block" 

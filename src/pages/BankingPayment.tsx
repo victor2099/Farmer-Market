@@ -15,7 +15,7 @@ const BankingPayment = () => {
          alt="logo" />
         </div>
 
-        <div className="mt-5 md:mt-10 max-w-lg">
+        <div className="mt-5 md:mt-10 md:mr-20 max-w-lg">
 
         < BankingPaymentInput />
         </div>

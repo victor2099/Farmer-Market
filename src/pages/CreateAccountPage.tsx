@@ -4,7 +4,7 @@ import CreateAccountInputField from "../components/CreateAccountInputField";
 
 function CreateAccountPage() {
   return (
-    <div className=" bg-light  font-dm-sans grid justify-center  h-full w-full md:grid-cols-[repeat(2,1fr)] gap-3 md:gap-10  px-3 pr-20 max-w-7xl mx-auto ">
+    <div className=" bg-light  font-dm-sans grid justify-center  h-full w-full md:grid-cols-[repeat(2,1fr)] gap-3 md:gap-10   pr-20 max-w-7xl mx-auto ">
       <div
         className="relative bg-cover bg-center bg-no-repeat h-screen w-full object-cover hidden md:block"
         style={{ backgroundImage: `url(${africanFarmerImage})` }}
@@ -16,7 +16,7 @@ function CreateAccountPage() {
         />
       </div>
 
-      <div className="mt-5 md:mt-10 max-w-lg ">
+      <div className="mt-5 md:mt-10 md:mr-20 max-w-lg ">
         <CreateAccountInputField />
       </div>
     </div>

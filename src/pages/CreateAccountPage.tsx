@@ -1,26 +1,24 @@
-import africanFarmerImage from "../assets/photorealistic-view-african-people-harvesting-vegetables-grains 1.svg";
+import africanFarmerImage from "../assets/photorealistic-view-african-people-harvesting-vegetables-grains 1.jpg";
 import logo from "../assets/Logo 2.png";
 import CreateAccountInputField from "../components/CreateAccountInputField";
 
 function CreateAccountPage() {
   return (
-    <div className="font-dm-sans grid h-screen w-full grid-cols-1 md:grid-cols-2 gap-5 text-[10px] sm:text-[14px] md:text-[16px] md:mb-[20px] px-3">
-      <div className="hidden md:block md:relative h-full w-full md:h-screen ">
+    <div className="font-dm-sans grid justify-center  h-full w-full md:grid-cols-[repeat(2,1fr)] gap-3 md:gap-10  px-3 ">
+      <div
+        className=" relative bg-cover bg-center bg-no-repeat h-screen w-full object-cover hidden md:block"
+        style={{ backgroundImage: `url(${africanFarmerImage})` }}
+      >
         <img
-          src={africanFarmerImage}
-          className="  w-full h-full object-cover "
-          alt="African farmer"
+          src={logo}
+          className="absolute mt-5  w-30 md:w-50  md:mt-10 h-10  pl-5   object-contain"
+          alt="logo"
         />
-        <div className="absolute top-2 left-1 md:left-3 ">
-          <img
-            src={logo}
-            className=" w-30 h-10  object-contain"
-            alt="farmer logo"
-          />
-        </div>
       </div>
 
-      <CreateAccountInputField />
+      <div className="mt-5 md:mt-10">
+        <CreateAccountInputField />
+      </div>
     </div>
   );
 }

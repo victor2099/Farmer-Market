@@ -8,6 +8,14 @@ import CreateAccountPage from "./pages/CreateAccountPage";
 
 import "./App.css";
 
+import BuyerDashboard from "./pages/BuyerDashboard";
+import Overview from "./components/dashboard-components/Overview";
+
+import FarmBusinessDetails from "./pages/FarmBusinessDetails";
+import VerificationDetails from "./pages/VerificationDetails";
+import BankingPayment from "./pages/BankingPayment";
+import SignPage from "./pages/SigninPage";
+
 // Example extra pages (create About.jsx, NotFound.jsx later)
 //function About() {
 //  return <h2>About Page</h2>;
@@ -18,12 +26,6 @@ function NotFound() {
 }
 
 function App() {
-  const [isCollasped, setIsCollasped] = useState(false);
-
-  const handleToggle = () => {
-    setIsCollasped((prev) => !prev);
-  };
-
   return (
     <Router>
       {/* Navigation */}
@@ -36,12 +38,17 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/createaccount" element={<CreateAccountPage />} />
-        <Route
-          path="/farmer"
-          element={
-            <Dashboard collapsed={isCollasped} onToggle={handleToggle} />
-          }
-        />
+
+        <Route path="/buyerdashboard" element={<BuyerDashboard />}>
+          <Route index element={<Overview />} />
+          <Route path="overview" element={<Overview />} />
+        </Route>
+
+        <Route path="/businessdetails" element={<FarmBusinessDetails />} />
+        <Route path="verifyd" element={<VerificationDetails />} />
+        <Route path="bankingpayment" element={<BankingPayment />} />
+        <Route path="signin" element={<SignPage />} />
+
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />
       </Routes>

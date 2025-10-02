@@ -126,7 +126,7 @@ function BusinessDetails() {
         {/* Submit */}
         <button
           type="submit"
-          className="text-[#20B658] border border-[#20B658] md:w-[300px] md:mx-auto py-2 rounded-md hover:text-white hover:bg-[#20B658] transition-colors mt-4 cursor-pointer"
+          className="text-green-btn border border-[#20B658] md:w-[300px] md:mx-auto py-2 rounded-md hover:text-white hover:bg-[#20B658] transition-colors mt-4 cursor-pointer"
         >
           Continue
         </button>

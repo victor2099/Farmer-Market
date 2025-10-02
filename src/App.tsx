@@ -1,11 +1,16 @@
 // App.jsx
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
 import Home from "./pages/Home"; // you already have this
 import Signup from "./pages/Signup";
-
+import Dashboard from "../src/pages/Farmerdashboard";
 import CreateAccountPage from "./pages/CreateAccountPage";
 
 import "./App.css";
+
+import BuyerDashboard from "./pages/BuyerDashboard";
+import Overview from "./components/dashboard-components/Overview";
+
 import FarmBusinessDetails from "./pages/FarmBusinessDetails";
 import VerificationDetails from "./pages/VerificationDetails";
 import BankingPayment from "./pages/BankingPayment";
@@ -33,13 +38,19 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/createaccount" element={<CreateAccountPage />} />
-        <Route path="/businessdetails" element={< FarmBusinessDetails />} />
-        <Route path="verifyd" element={ < VerificationDetails /> }/>
-        <Route path="bankingpayment" element={ <BankingPayment />} />   
-        <Route path="signin" element={ <SignPage />} />
+
+        <Route path="/buyerdashboard" element={<BuyerDashboard />}>
+          <Route index element={<Overview />} />
+          <Route path="overview" element={<Overview />} />
+        </Route>
+
+        <Route path="/businessdetails" element={<FarmBusinessDetails />} />
+        <Route path="verifyd" element={<VerificationDetails />} />
+        <Route path="bankingpayment" element={<BankingPayment />} />
+        <Route path="signin" element={<SignPage />} />
+
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />
-       
       </Routes>
     </Router>
   );

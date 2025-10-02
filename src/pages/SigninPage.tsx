@@ -1,11 +1,11 @@
 import bgImage from "../assets/Rectangle 28.jpg"
 import logo from "../assets/Asset 10.png";
-import VerificationDetailsInput from "../components/VerificationDetailsInput"
+import SignInput from "../components/SingInput";    
 
-
-function VerificationDetails() {
+const SigninPage = () => {
   return (
-    <div className="font-dm-sans grid justify-center  h-full w-full md:grid-cols-[repeat(2,1fr)] gap-3 md:gap-10  px-3 ">
+     <div>
+         <div className="font-dm-sans grid justify-center  h-full w-full md:grid-cols-[repeat(2,1fr)] gap-3 md:gap-10  px-3 ">
       
         <div 
         className=" relative bg-cover  bg-no-repeat h-screen w-full object-cover hidden md:block" 
@@ -17,10 +17,12 @@ function VerificationDetails() {
 
         <div className="mt-5 md:mt-10">
 
-        < VerificationDetailsInput />
+        < SignInput />
         </div>
+    </div>
+      
     </div>
   )
 }
 
-export default VerificationDetails
+export default SigninPage

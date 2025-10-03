@@ -9,7 +9,7 @@ function CreateAccountPage() {
       
       {/* Left Section - Farmer Image + Logo */}
       <div
-        className="relative h-15 md:h-auto bg-cover bg-center bg-no-repeat"
+        className="relative h-50  bg-[position:20%_40%] md:h-auto bg-cover  bg-no-repeat"
         style={{ backgroundImage: `url(${africanFarmerImage})` }}
         role="img"
         aria-label="African farmer harvesting fresh vegetables in a field"

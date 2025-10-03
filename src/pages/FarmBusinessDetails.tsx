@@ -8,7 +8,7 @@ function FarmBusinessDetails() {
       
       {/* Left Section - Farmer Image + Logo */}
       <div
-        className="relative h-15 md:h-auto bg-cover bg-center bg-no-repeat"
+        className="relative md:h-auto bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${bgImage})` }}
         role="img"
         aria-label="African farmer harvesting fresh vegetables in a field"

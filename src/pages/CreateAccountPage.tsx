@@ -4,20 +4,29 @@ import CreateAccountInputField from "../components/CreateAccountInputField";
 
 function CreateAccountPage() {
   return (
-    <div className=" bg-light  font-dm-sans grid justify-center  h-full w-full md:grid-cols-[repeat(2,1fr)] gap-3 md:gap-10   pr-20 max-w-7xl mx-auto ">
+    <div className="bg-light font-dm-sans min-h-screen w-full flex flex-col  md:grid md:grid-cols-[1fr_1.2fr] md:gap-5 max-w-7xl mx-auto">
+      
+      {/* Left Section - Farmer Image + Logo */}
       <div
-        className="relative bg-cover bg-center bg-no-repeat h-screen w-full object-cover hidden md:block"
+        className="relative h-15 md:h-auto bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${africanFarmerImage})` }}
+        role="img"
+        aria-label="African farmer harvesting fresh vegetables in a field"
       >
-        <img
-          src={logo}
-          className="absolute mt-5  w-30 md:w-50  md:mt-10 h-10  pl-5   object-contain"
-          alt="logo"
-        />
+        <a href="/" aria-label="FarmMarket Home">
+          <img
+            src={logo}
+            className="absolute top-4 sm:top-10 left-4 w-24 sm:w-28 md:w-35 object-contain"
+            alt="FarmMarket Logo"
+          />
+        </a>
       </div>
 
-      <div className="mt-5 md:mt-10 md:mr-20 max-w-lg ">
-        <CreateAccountInputField />
+      {/* Right Section - Form */}
+      <div className="flex justify-center py-10  md:pr-5 px-12">
+        <div className="w-full max-w-lg">
+          <CreateAccountInputField />
+        </div>
       </div>
     </div>
   );

@@ -54,7 +54,7 @@ const SingInput = () => {
   
   return (
     <div className="mt-8 md:mt-0 md:pt-0  flex flex-col h-full">
-      <h1 className="text-green-600 font-bold pb-2 mb-5 text-[20px] md:text-[32px]">
+      <h1 className="  text-green-btn font-bold text-md sm:text-lg">
         Sign In to your Account
       </h1>
 
@@ -100,7 +100,7 @@ const SingInput = () => {
          <div className="flex items-center flex-row gap-3 pt-3">
           <button
             type="submit"
-            className="bg-[#20B658] border-0 text-white cursor-pointer font-medium px-8 py-2 rounded-md  border-green-600 hover:bg-green-dark  transition duration-300"
+            className="bg-[#20B658] border-0 text-white cursor-pointer font-medium text-xs  px-4 md:px-8  py-2 rounded-md  border-green-600 hover:bg-green-dark  transition duration-300"
           >
             Sign In
           </button>
@@ -109,7 +109,7 @@ const SingInput = () => {
           <button
             type="button"
             onClick={() => setIsSignUp(false)}
-             className="bg-[#20B658] border-0 text-white cursor-pointer font-medium px-8 py-2 rounded-md  border-green-600 hover:bg-green-dark  transition duration-300"
+             className="bg-[#20B658] border-0 text-white cursor-pointer font-medium text-xs px-4 md:px-8  py-2 rounded-md  border-green-600 hover:bg-green-dark  transition duration-300"
              >
             Sign Up
            

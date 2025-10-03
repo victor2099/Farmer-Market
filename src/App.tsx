@@ -13,7 +13,7 @@ import Overview from "./components/dashboard-components/Overview";
 
 import FarmBusinessDetails from "./pages/FarmBusinessDetails";
 import VerificationDetails from "./pages/VerificationDetails";
-import BankingPayment from "./pages/Signup";
+import BankingPayment from "./pages/BankingPayment";
 import SignPage from "./pages/SigninPage";
 import BuyerReg from "./pages/BuyerReg";
 import SuccessPage from "./pages/SuccessPage";

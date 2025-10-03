@@ -19,6 +19,9 @@ import BuyerReg from "./pages/BuyerReg";
 import SuccessPage from "./pages/SuccessPage";
 
 import VerificationCode from "./pages/VerificationCode";
+import Marketplace from "./pages/MarketplacePage";
+import CartPage from "./pages/CartPage";
+import WalletPage from "./pages/WalletPage";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
 //function About() {
@@ -48,15 +51,18 @@ function App() {
           <Route path="overview" element={<Overview />} />
         </Route>
 
+        <Route path="/cartpage" element={<CartPage />} />
+        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/wallet" element={<WalletPage />} />
+
         <Route path="/businessdetails" element={<FarmBusinessDetails />} />
         <Route path="verifyd" element={<VerificationDetails />} />
         <Route path="bankingpayment" element={<BankingPayment />} />
         <Route path="farmer" element={<Dashboard />} />
         <Route path="signin" element={<SignPage />} />
-        <Route path="buyerreg" element={<BuyerReg/>} />
-        <Route path="verificationcode" element={<VerificationCode/>} />
-        <Route path="successpage" element={<SuccessPage/>} />
-
+        <Route path="buyerreg" element={<BuyerReg />} />
+        <Route path="verificationcode" element={<VerificationCode />} />
+        <Route path="successpage" element={<SuccessPage />} />
 
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />

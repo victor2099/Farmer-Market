@@ -1,5 +1,4 @@
 import {
-  User,
   Bell,
   TrendingUp,
   PiggyBank,
@@ -12,6 +11,7 @@ import {
 } from "lucide-react";
 import StatsCard from "./StatsCard";
 import OrderTable from "./OrderTable";
+import Image from "../../assets/marketplace-images/Ellipse 1.svg";
 
 const Overview = () => {
   return (
@@ -36,7 +36,7 @@ const Overview = () => {
           </div>
           <div className="">
             <button>
-              <User className="w-11 h-11 p-2 bg-gray-200 rounded-full" />
+              <img src={Image} alt="" className="w-11" />
             </button>
           </div>
         </div>

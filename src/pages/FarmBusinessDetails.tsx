@@ -1,14 +1,14 @@
-import bgImage from "../assets/Rectangle 28.jpg"
+import bgImage from "../assets/Rectangle 28.png"
 import logo from "../assets/Asset 10.png";
 import BusinessDetailsInput from "../components/FarmBusinessDetailsInput";
 
 function FarmBusinessDetails() {
   return (
-   <div className="bg-light font-dm-sans min-h-screen w-full flex flex-col  md:grid md:grid-cols-[1fr_1.2fr] md:gap-2 max-w-7xl mx-auto">
+   <div className="bg-light font-dm-sans min-h-screen w-full flex flex-col  md:grid md:grid-cols-[1fr_1.2fr] md:gap-2 max-w-5xl mx-auto">
       
       {/* Left Section - Farmer Image + Logo */}
       <div
-        className="relative md:h-auto bg-cover bg-center bg-no-repeat"
+        className="relative h-50  md:h-auto bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${bgImage})` }}
         role="img"
         aria-label="African farmer harvesting fresh vegetables in a field"
@@ -21,6 +21,9 @@ function FarmBusinessDetails() {
           />
         </a>
       </div>
+
+       <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/20 to-transparent" />
+
 
       {/* Right Section - Form */}
       <div className="flex justify-center py-10  md:pr-5 px-12">

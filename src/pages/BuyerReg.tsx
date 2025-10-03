@@ -1,42 +1,57 @@
-import bgImage from "../assets/woman-harvesting-vegetable 1.jpg";
+import bgImage from "../assets/woman-farm.png";
 import logo from "../assets/Logo 2.png";
+import { Link } from "react-router-dom";
+import back from "../assets/arrow-icon.svg";
 
 const BuyerReg: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] max-h-full w-full font-dm-sans  bg-light md:px-20 md:py-10 max-w-5xl mx-auto md:gap-10">
+    <div className="bg-light font-dm-sans min-h-screen w-full flex items-center justify-center md:px-10">
+    <div className="grid grid-cols-1 md:grid-cols-[1fr_2.5fr]  w-full font-dm-sans bg-light max-w-5xl mx-auto ">
       
     
       <div
-        className="relative md:flex flex-col   p-12 bg-cover bg-center rounded-lg"
+        className="relative md:flex flex-col   p-12 sm:py-5 sm:px-1 bg-cover bg-center "
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         
         <div className="relative ">
-          {/* Logo */}
+        
           <img
             src={logo}
             alt="FarmMarket Logo"
-            className="w-35 md:w-60 mb-10"
+            className="w-35 sm:w-40 mb-10"
           />
 
-          {/* Welcome Text */}
+          
           <div className="text-white max-w-sm">
-            <h1 className="text-xl md:text-2xl font-bold mb-2">
+            <h1 className="text-xl md:text-3xl font-bold mb-2 sm:w-[20px]">
               Hello, Welcome!
             </h1>
-            <p className="text-base md:text-lg">
+            <p className="text-base md:text-sm">
               Please create your verified account.
             </p>
           </div>
         </div>
       </div>
+       <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/20 to-transparent" />
+
 
       {/* Right Section - Form */}
       <div className="flex  justify-start pt-5 px-12 ">
+
+
         <div className="w-full max-w-md">
-          <h2 className="text-green-600 text-2xl font-semibold mb-6">
+
+           <div className="relative  gap-3 mb-6">
+              <Link to="/signup2">
+     <img src={back} className="w-6 absolute -left-8 md:-left-10 top-1 hover:opacity-50" alt="Back" /> </Link> 
+          <h2 className="text-green-btn text-2xl font-semibold mb-6">
             Create Account
           </h2>
+          </div>
+
+
+          
 
           <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Full Name */}
@@ -45,7 +60,7 @@ const BuyerReg: React.FC = () => {
               <input
                 type="text"
                 placeholder="John Doe"
-                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full  mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-btn text-sm"
               />
             </div>
 
@@ -55,7 +70,7 @@ const BuyerReg: React.FC = () => {
               <input
                 type="tel"
                 placeholder="+234"
-                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-btn text-sm"
               />
             </div>
 
@@ -65,7 +80,7 @@ const BuyerReg: React.FC = () => {
               <input
                 type="email"
                 placeholder="johndoe@gmail.com"
-                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-btn text-sm"
               />
             </div>
 
@@ -75,7 +90,7 @@ const BuyerReg: React.FC = () => {
               <input
                 type="password"
                 placeholder="min. 6 characters"
-                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-btn text-sm"
               />
             </div>
 
@@ -86,14 +101,14 @@ const BuyerReg: React.FC = () => {
               </label>
               <input
                 type="password"
-                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-btn text-sm"
               />
             </div>
 
             {/* State */}
             <div>
               <label className="block text-sm font-medium">State</label>
-              <select className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+              <select className="w-full text-gray-500 mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-btn text-sm">
                 <option>Select State</option>
               </select>
             </div>
@@ -101,7 +116,7 @@ const BuyerReg: React.FC = () => {
             {/* LGA */}
             <div>
               <label className="block text-sm font-medium">LGA</label>
-              <select className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+              <select className="w-full text-gray-500 mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-btn text-sm">
                 <option>Select LGA</option>
               </select>
             </div>
@@ -114,7 +129,7 @@ const BuyerReg: React.FC = () => {
               </label>
               <input
                 type="text"
-                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-btn text-sm"
               />
             </div>
 
@@ -126,7 +141,7 @@ const BuyerReg: React.FC = () => {
               </label>
               <input
                 type="text"
-                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-btn text-sm"
               />
             </div>
 
@@ -146,7 +161,7 @@ const BuyerReg: React.FC = () => {
             <div className="sm:col-span-2">
               <button
                 type="submit"
-                className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
+                className="w-full bg-green-btn text-white py-2 rounded-md hover:bg-green-dark transition"
               >
                 Register
               </button>
@@ -154,6 +169,7 @@ const BuyerReg: React.FC = () => {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };

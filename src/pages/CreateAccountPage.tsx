@@ -16,16 +16,15 @@ function CreateAccountPage() {
         <a href="/" aria-label="FarmMarket Home">
           <img
             src={logo}
-            className="absolute top-4 sm:top-10 left-4 w-24 sm:w-28 md:w-35 object-contain"
+            className="absolute top-4 inset-0 sm:top-10 left-4 w-24 sm:w-28 md:w-35 object-contain"
             alt="FarmMarket Logo"
           />
         </a>
       </div>
-       <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/20 to-transparent" />
-
+     
 
       {/* Right Section - Form */}
-      <div className="flex justify-center py-10  md:pr-5 px-12">
+      <div className="flex justify-center py-10  md:pr-5 px-12 inset-0">
         <div className="w-full max-w-lg">
           <CreateAccountInputField />
         </div>

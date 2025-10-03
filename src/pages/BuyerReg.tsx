@@ -33,8 +33,7 @@ const BuyerReg: React.FC = () => {
           </div>
         </div>
       </div>
-       <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/20 to-transparent" />
-
+     
 
       {/* Right Section - Form */}
       <div className="flex  justify-start pt-5 px-12 ">

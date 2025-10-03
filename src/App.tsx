@@ -20,6 +20,7 @@ import SuccessPage from "./pages/SuccessPage";
 import Signup2 from "./pages/Signup2";
 
 import VerificationCode from "./pages/VerificationCode";
+import OrderTracking from "./pages/OrderTracking";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
 //function About() {
@@ -58,6 +59,7 @@ function App() {
         <Route path="verificationcode" element={<VerificationCode/>} />
         <Route path="successpage" element={<SuccessPage/>} />
         <Route path="signup2" element={<Signup2/>} />
+        <Route path="ordertracking" element={<OrderTracking/>} />
 
 
         {/* Catch-all */}

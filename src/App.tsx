@@ -17,7 +17,7 @@ import BankingPayment from "./pages/BankingPayment";
 import SignPage from "./pages/SigninPage";
 import BuyerReg from "./pages/BuyerReg";
 import SuccessPage from "./pages/SuccessPage";
-import Singnup2 from "./pages/Singnup2";
+import Signup2 from "./pages/Signup2";
 
 import VerificationCode from "./pages/VerificationCode";
 
@@ -57,7 +57,7 @@ function App() {
         <Route path="buyerreg" element={<BuyerReg/>} />
         <Route path="verificationcode" element={<VerificationCode/>} />
         <Route path="successpage" element={<SuccessPage/>} />
-        <Route path="signup2" element={<Singnup2/>} />
+        <Route path="signup2" element={<Signup2/>} />
 
 
         {/* Catch-all */}

@@ -29,7 +29,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {" "}
       {/* Sidebar */}
       <aside
         className={`fixed md:static top-0 left-0 h-full w-64 bg-white border-r border-gray-100 p-6 flex-col justify-between z-50 transform transition-transform duration-300 ${
@@ -139,7 +138,7 @@ export default function Sidebar() {
         </div>
       </aside>
       {/* Main Content */}
-      <main className="flex-1 p-4 sm:p-6 md:p-8 overflow-y-auto">
+      <main className=" p-4 sm:p-6 md:p-8 overflow-y-auto">
         {/* Mobile Navbar Toggle */}
         <button
           className="md:hidden mb-4 p-2 border rounded-lg"

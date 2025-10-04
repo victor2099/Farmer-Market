@@ -5,6 +5,7 @@ import Home from "./pages/Home"; // you already have this
 import Signup from "./pages/BuyerReg";
 import Dashboard from "../src/pages/Farmerdashboard";
 import CreateAccountPage from "./pages/CreateAccountPage";
+import Upload from "../src/pages/Upload";
 
 import "./App.css";
 
@@ -17,7 +18,7 @@ import BankingPayment from "./pages/BankingPayment";
 import SignPage from "./pages/SigninPage";
 import BuyerReg from "./pages/BuyerReg";
 import SuccessPage from "./pages/SuccessPage";
-import Signup2 from "./pages/Signup2";
+import SignupHome from "./pages/SignupHome";
 
 import VerificationCode from "./pages/VerificationCode";
 import Marketplace from "./pages/MarketplacePage";
@@ -49,6 +50,7 @@ function App() {
       {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="signupHome" element={<SignupHome />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/createaccount" element={<CreateAccountPage />} />
 
@@ -69,6 +71,7 @@ function App() {
         />
 
         <Route path="/businessdetails" element={<FarmBusinessDetails />} />
+        <Route path="/upload" element={<Upload />} />
         <Route path="verifyd" element={<VerificationDetails />} />
         <Route path="bankingpayment" element={<BankingPayment />} />
         <Route path="farmer" element={<Dashboard />} />
@@ -79,7 +82,11 @@ function App() {
         <Route path="buyerreg" element={<BuyerReg />} />
         <Route path="verificationcode" element={<VerificationCode />} />
         <Route path="successpage" element={<SuccessPage />} />
+<<<<<<< HEAD
         <Route path="signup2" element={<Signup2 />} />
+=======
+
+>>>>>>> 7d3e8af10215410d8263f2029af445eba662dcc7
         <Route path="ordertracking" element={<OrderTracking />} />
 
         {/* Catch-all */}

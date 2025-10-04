@@ -1,10 +1,8 @@
 import bgImage from "../assets/tractor.jpg";
 import logo from "../assets/Logo white 1.svg";
 import { Link } from "react-router-dom";
-
-import React from "react";
-
-const Signup2: React.FC = () => {
+import arrow from '../assets/arrow-icon.svg'
+const SignupHome: React.FC = () => {
   return (
     <div
       className="instrument-sans relative h-screen w-full bg-cover bg-center overflow-hidden"
@@ -13,21 +11,28 @@ const Signup2: React.FC = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
 
       {/* Top Navbar */}
       <header className="relative flex items-center justify-between px-6 md:px-12 py-4">
         <div className="flex items-center gap-2">
+          <Link to='/'>
           <img
             src={logo}
             className="w-[162.08px] h-[42.83px] object-contain"
             alt="Logo"
           />
+          </Link>
         </div>
       </header>
 
       {/* Hero Section */}
       <div className="relative flex flex-col justify-center items-center sm:items-start h-[calc(100vh-72px)] px-8 md:px-16 gap-12 max-w-3xl">
+        <Link to="/">
+          <img src={arrow}
+          className="sm:w-10"
+           alt="" />
+        </Link>
         <h1 className="text-4xl text-center sm:text-left w-full md:text-6xl font-instrument  font-semibold text-white leading-snug tracking-tight">
           Fresh Food From <br /> Farmers
         </h1>
@@ -51,4 +56,4 @@ const Signup2: React.FC = () => {
   );
 };
 
-export default Signup2;
+export default SignupHome;

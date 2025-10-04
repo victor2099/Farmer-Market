@@ -1,5 +1,6 @@
 {
   "name": "farmer",
+  "homepage": "https://elydeboss.github.io/Farmer-market/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,16 +8,18 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.14",
-    "lucide": "^0.544.0",
+    "@tailwindcss/vite": "^4.1.13",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.544.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.3",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import {Link } from "react-router-dom"
+import logo from "../assets/arrow-icon.svg";
 
 type check = {
   email: string;
@@ -54,10 +55,14 @@ const SingInput = () => {
   
   return (
     <div className="mt-8 md:mt-0 md:pt-0  flex flex-col h-full">
-      <h1 className="  text-green-btn font-bold text-md sm:text-lg">
-        Sign In to your Account
-      </h1>
 
+        <div className="relative  gap-3 mb-6">
+     <Link to="/">
+     <img src={logo} className="w-6 absolute -left-8 md:-left-10 top-0.5 hover:opacity-50" alt="Back" /> </Link> 
+     <h1 className="  text-green-btn font-bold text-md sm:text-lg">  Sign In to your Account </h1>
+      </div>
+
+    
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         {/* Email Address */ }
         <div className="flex flex-col gap-1">
@@ -105,7 +110,8 @@ const SingInput = () => {
             Sign In
           </button>
 
-          <Link to="/createaccount">
+          <Link to="/signuphome
+          ">
           <button
             type="button"
             onClick={() => setIsSignUp(false)}

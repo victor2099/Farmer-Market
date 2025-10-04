@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { createProduct, listProducts, getProduct, updateProduct, deleteProduct } from "../../backend/src/controllers/product.controller";
-import { authMiddleware, authorizeRoles } from "../../backend/src/middlewares/auth.adapter";
+import { createProduct, listProducts, getProduct, updateProduct, deleteProduct } from "../controllers/product.controller";
+import { authMiddleware, authorizeRoles } from "../middlewares/auth.adapter";
 
 const r = Router();
 

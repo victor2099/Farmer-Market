@@ -5,6 +5,7 @@ import Home from "./pages/Home"; // you already have this
 import Signup from "./pages/BuyerReg";
 import Dashboard from "../src/pages/Farmerdashboard";
 import CreateAccountPage from "./pages/CreateAccountPage";
+import Upload from "../src/pages/Upload";
 
 import "./App.css";
 
@@ -49,14 +50,14 @@ function App() {
         </Route>
 
         <Route path="/businessdetails" element={<FarmBusinessDetails />} />
+        <Route path="/upload" element={<Upload />} />
         <Route path="verifyd" element={<VerificationDetails />} />
         <Route path="bankingpayment" element={<BankingPayment />} />
         <Route path="farmer" element={<Dashboard />} />
         <Route path="signin" element={<SignPage />} />
-        <Route path="buyerreg" element={<BuyerReg/>} />
-        <Route path="verificationcode" element={<VerificationCode/>} />
-        <Route path="successpage" element={<SuccessPage/>} />
-
+        <Route path="buyerreg" element={<BuyerReg />} />
+        <Route path="verificationcode" element={<VerificationCode />} />
+        <Route path="successpage" element={<SuccessPage />} />
 
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />

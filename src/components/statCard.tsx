@@ -1,35 +1,73 @@
 import React from "react";
 
-interface StatCardProps {
-  title: string;
-  value: string | number;
-  hint?: React.ReactNode;
-  colorClass?: string; // e.g. "bg-amber-50"
-  icon?: React.ReactNode;
+// --- TypeScript Interfaces ---
+interface RequestedItem {
+  name: string;
+  quantity: number;
 }
 
-const StatCard: React.FC<StatCardProps> = ({
-  title,
-  value,
-  hint,
-  colorClass = "bg-white",
-  icon,
+export interface BuyerRequest {
+  // Exporting so it can be used in App.tsx
+  id: string;
+  name: string;
+  location: string;
+  distance: string;
+  time: string;
+  items: RequestedItem[];
+  avatarUrl: string;
+}
+
+interface BuyerRequestCardProps {
+  request: BuyerRequest;
+}
+// -----------------------------
+
+export const BuyerRequestCard: React.FC<BuyerRequestCardProps> = ({
+  request,
 }) => {
   return (
-    <div className={`rounded-2xl p-6 shadow-sm ${colorClass}`}>
-      <div className="flex items-start justify-between">
+    <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
+      {/* Buyer Info */}
+      <div className="flex items-center space-x-4 mb-4">
+        <img
+          className="h-10 w-10 rounded-full object-cover"
+          src={request.avatarUrl}
+          alt={request.name}
+        />
         <div>
-          <div className="text-xs text-gray-500">{title}</div>
-          <div className="mt-3 text-2xl font-semibold text-gray-800">
-            {value}
-          </div>
-          {hint && <div className="mt-2 text-xs text-gray-400">{hint}</div>}
+          <h3 className="text-base font-semibold text-gray-900">
+            {request.name}
+          </h3>
+          <p className="text-sm text-gray-500">{request.location}</p>
         </div>
-
-        <div className="text-gray-500">{icon}</div>
+        <div className="ml-auto text-right text-sm text-gray-500">
+          <p>{request.distance}</p>
+          <p>{request.time}</p>
+        </div>
       </div>
+
+      {/* Requested Items */}
+      <div className="mb-6">
+        <p className="text-sm font-medium text-gray-700 mb-2">
+          Requested Item:
+        </p>
+        {request.items.map((item, index) => (
+          <div
+            key={index}
+            className="flex justify-between items-center text-sm text-gray-800 py-1 border-b border-gray-100 last:border-b-0"
+          >
+            <span>{item.name}:</span>
+            <span className="font-medium">
+              {item.quantity.toLocaleString()}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* Action Button */}
+      <button className="w-full py-2 px-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-150 ease-in-out">
+        Claim Order
+      </button>
     </div>
   );
 };
-
-export default StatCard;

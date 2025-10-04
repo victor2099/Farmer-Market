@@ -1,4 +1,4 @@
-import { PhoneCall, Instagram, Facebook, MapPin } from "lucide-react";
+import { Phone, Instagram, Facebook, MapPin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -6,31 +6,32 @@ export default function Footer() {
       <div className="max-w-[1100px] mx-auto py-15 px-5 flex justify-between gap-10 md:flex-row flex-col">
         <div className="w-full md:w-1/3">
           <h4 className="text-white mb-4 font-semibold text-xl">Contact Us</h4>
-          <p className="text-light text-sm flex gap-3 items-center">
+          <p className="text-light text-sm flex gap-3  items-center">
             {/* Phone Icon */}
-            <PhoneCall /> 08123377800
+            <Phone className="w-6 h-6 text-[#fff]" />
+            <span>08123377800</span>
           </p>
         </div>
         <ul className="list-none w-full md:w-1/3 space-y-4">
-          <li className="text-light text-sm flex gap-4 items-center">
-            <a href="">
+          <li>
+            <a href="" className="text-light text-sm flex gap-4 items-center">
               {/* Instargram Icon */}
-              <Instagram />
-              @FarmMarket
+              <Instagram className="w-6 h-6 text-[#fff]" />
+              <span className="leading-none">@FarmMarket</span>
             </a>
           </li>
-          <li className="text-light text-sm flex gap-4 items-center">
-            <a href="">
+          <li>
+            <a href="" className="text-light text-sm flex gap-4 items-center">
               {/* X Icon */}
-              <i className="fab fa-twitter-f"></i>
-              @FarmMarketNg
+              <Twitter className="w-6 h-6 text-[#fff]" />
+              <span className="leading-none">@FarmMarketNg</span>
             </a>
           </li>
-          <li className="text-light text-sm flex gap-4 items-center">
-            <a href="">
+          <li>
+            <a href="" className="text-light text-sm flex gap-4 items-center">
               {/* Facebook Icon */}
-              <Facebook />
-              Farm Market Nigeria
+              <Facebook className="w-6 h-6 text-[#fff]" />
+              <span className="leading-none">Farm Market Nigeria</span>
             </a>
           </li>
         </ul>
@@ -38,9 +39,11 @@ export default function Footer() {
           <h4 className="text-white mb-4 text-xl font-semibold">Address</h4>
           <p className="text-light text-sm flex gap-4 items-center">
             {/* Marker Icon */}
-            <MapPin className="h-4 w-4" />
-            Lorem ipsum dolor sit amet consectetur. Faucibus aliquet laoreet
-            rutrum id.
+            <MapPin className="w-6 h-6 text-[#fff]" />
+            <span>
+              Lorem ipsum dolor sit amet consectetur. Faucibus aliquet laoreet
+              rutrum id.
+            </span>
           </p>
         </div>
       </div>

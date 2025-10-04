@@ -1,3 +1,4 @@
+
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Image1 from "../assets/Home-Images/Home-Img 1.svg";
@@ -9,6 +10,7 @@ import Image6 from "../assets/Home-Images/Home-Img 6.svg";
 import Image7 from "../assets/Home-Images/Home-Img 7.svg";
 import Image8 from "../assets/Home-Images/Home-Img 8.svg";
 import Image9 from "../assets/Home-Images/Home-Img 9.svg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -34,15 +36,17 @@ const Home = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
             inventore sit nobis quibusdam.
           </p>
+           <Link to="/marketplace">
           <button className="bg-sec text-black text-sm font-bold py-3 px-6 rounded-md hover:bg-sec2">
             Discover More
           </button>
+          </Link>
         </div>
       </section>
 
       {/* HEALTHY FOOD */}
       <section className="pt-20 pb-20 md:pb-[200px]">
-        <div className="max-w-[1100px] px-5 mx-auto grid gap-10 md:grid-cols-2 items-center">
+        <div className="max-w-[1100px] px-5 mx-auto grid gap-10 md:grid-cols-[40%_60%] items-center">
           {/* IMAGE SECTION */}
           <div className="relative w-full">
             <img
@@ -53,7 +57,7 @@ const Home = () => {
             <img
               src={Image3}
               alt="Small Food"
-              className="absolute bottom-0 right-0 w-40 md:w-48 shadow-lg transform translate-x-10 translate-y-10"
+              className="absolute bottom-0 right-0 w-40 md:w-48 shadow-lg transform md:translate-x-30 md:translate-y-15"
             />
           </div>
           {/* TEXT SECTION */}
@@ -75,9 +79,13 @@ const Home = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </li>
             </ul>
-            <button className="mt-6 bg-black text-white text-sm font-bold py-3 px-6 rounded-md">
-              Discover More
-            </button>
+            <div className="mt-6 md:mb-10">
+              <Link to="/marketplace">
+              <button className=" bg-black inline-block text-white text-sm font-bold py-3 px-6 rounded-md">
+                Discover More
+              </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -95,10 +103,22 @@ const Home = () => {
               Cupiditate cumque pariatur culpa.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <img src={Image4} alt="Delivery" className="rounded-md shadow" />
-            <img src={Image5} alt="Delivery" className="rounded-md shadow" />
-            <img src={Image6} alt="Delivery" className="rounded-md shadow" />
+          <div className="grid grid-cols-1 md:grid-cols-[30%_40%_30%] gap-6">
+            <img
+              src={Image4}
+              alt="Delivery"
+              className="rounded-md w-full shadow"
+            />
+            <img
+              src={Image5}
+              alt="Delivery"
+              className="rounded-md w-full shadow"
+            />
+            <img
+              src={Image6}
+              alt="Delivery"
+              className="rounded-md w-full shadow"
+            />
           </div>
         </div>
       </section>
@@ -120,18 +140,18 @@ const Home = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="flex flex-col md:flex-row gap-6 items-start md:items-center"
+                className="flex  md:flex-row gap-6 items-start md:items-center"
               >
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-[100px] md:w-[118px] rounded-md shadow"
+                  className="w-[30%] md:w-[118px] rounded-md shadow"
                 />
-                <div className="space-y-4">
+                <div className="space-y-2 sm:space-y-4">
                   <h4 className="text-pri text-lg md:text-xl font-semibold">
                     {item.name}
                   </h4>
-                  <p className="text-gray-500">
+                  <p className="text-gray-500 text-sm sm:text-base">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Voluptatum reprehenderit ratione nam labore. Illum nihil
                     ducimus pariatur velit molestiae aliquid?

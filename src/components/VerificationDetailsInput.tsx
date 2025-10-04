@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/arrow-icon.svg";
 
 function VerificationDetailsInput() {
   const [idFile, setIdFile] = useState<File | null>(null);
@@ -33,10 +35,14 @@ function VerificationDetailsInput() {
     };
 
   return (
-    <>
-      <div className="mt-8 md:mt-0 mb-4 text-[#20B658] text-[20px] font-bold md:text-[32px]">
-        Verification of Details
+      <div className="mt-2 md:mt-0  flex flex-col h-full">
+
+        <div className="relative  gap-3 mb-6">
+        <Link to="/businessdetails">
+        <img src={logo} className="w-6 absolute -left-8 md:-left-10 top-0.5 hover:opacity-50" alt="Back" /> </Link> 
+        <h1 className="  text-green-btn font-bold text-md sm:text-lg"> Verification of Details</h1>
       </div>
+
 
       <form onSubmit={handleFileSubmit} className="py-5 flex flex-col gap-10">
         {/* Government ID */}
@@ -85,7 +91,8 @@ function VerificationDetailsInput() {
           Continue
         </button>
       </form>
-    </>
+    </div>
+    
   );
 }
 

@@ -50,20 +50,21 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <Link to="/createaccount">
-            <button className="bg-sec text-black text-sm font-bold py-3 px-5 rounded-md hover:bg-sec2">
+          <Link to="/signuphome">
+            <button className="bg-sec border-2 border-sec outline-0 w-28 transition text-black text-sm font-bold py-[11px] px-5 rounded-md hover:bg-sec2 hover:border-sec2">
               Sign Up
             </button>
           </Link>
-          <Link to="/login">
-            <button className="block lg:hidden bg-sec text-black text-sm font-bold py-3 px-5 rounded-md hover:bg-sec2">
+
+          {/* <Link to="/login">
+            <button className="block md:hidden lg:hidden bg-sec text-black text-sm font-bold py-3 px-5 rounded-md hover:bg-sec2">
               Log In
             </button>
-          </Link>
+          </Link> */}
 
           <Link to="/signin">
             {" "}
-            <button className="border-0 outline-0 cursor-pointer bg-sec text-black text-sm font-bold py-3 px-3 rounded-md hover:bg-sec2">
+            <button className="border-2 border-sec w-28 transition outline-0 cursor-pointer text-sec  text-sm font-bold py-[11px] px-3 rounded-md hover:bg-sec hover:text-black">
               Log In
             </button>
           </Link>
@@ -116,14 +117,14 @@ const Navbar: React.FC = () => {
           </NavLink>
 
           <div className="flex flex-col gap-3 pt-4">
-            <Link to="/createaccount" onClick={() => setIsOpen(false)}>
-              <button className="w-full bg-sec text-black text-sm font-bold py-3 px-5 rounded-md hover:bg-sec2">
+            <Link to="/signuphome" onClick={() => setIsOpen(false)}>
+              <button className="bg-sec w-full border-2 border-sec outline-0 transition text-black text-sm font-bold py-[11px] px-5 rounded-md hover:bg-sec2 hover:border-sec2">
                 Sign Up
               </button>
             </Link>
-            <Link to="/login" onClick={() => setIsOpen(false)}>
-              <button className="w-full bg-sec text-black text-sm font-bold py-3 px-5 rounded-md hover:bg-sec2">
-                Login In
+            <Link to="/signin" onClick={() => setIsOpen(false)}>
+              <button className="border-2 border-sec w-full transition outline-0 cursor-pointer text-sec  text-sm font-bold py-[11px] px-3 rounded-md hover:bg-sec hover:text-black">
+                Log In
               </button>
             </Link>
           </div>

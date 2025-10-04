@@ -1,3 +1,4 @@
+import logo from "../assets/arrow-icon.svg";
 import { useState } from "react";
 import {Link } from "react-router-dom";
 
@@ -85,8 +86,13 @@ function CreateAccountInputField() {
   };
 
   return (
-    <div className="mt-8 md:mt-0 md:pt-3 flex flex-col h-full">
-      <h1 className="  text-[#20B658] font-bold pb-2 mb-5 text-[16px] sm:text-[20px] md:text-[32px]">Create Account</h1>
+    <div className="mt-2 md:mt-0  flex flex-col h-full">
+
+      <div className="relative  gap-3 mb-6">
+     <Link to="/signuphome">
+     <img src={logo} className="w-6 absolute -left-8 md:-left-10 top-0.5 hover:opacity-50" alt="Back" /> </Link> 
+     <h1 className="  text-green-btn font-bold text-md sm:text-lg"> Create Account</h1>
+      </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-1 text-sm ">
         <div className="flex flex-col gap-1">
@@ -201,7 +207,7 @@ function CreateAccountInputField() {
         <div className="flex items-center flex-row gap-3 pt-3">
           <button
             type="submit"
-            className=" text-white border-0 cursor-pointer font-medium px-8 py-2 rounded-md  border-green-600 bg-[#20B658]  hover:bg-green-dark  transition duration-300"
+            className="bg-[#20B658] border-0 text-white cursor-pointer font-medium text-xs  px-4 md:px-8  py-2 rounded-md  border-green-600 hover:bg-green-dark  transition duration-300"
           >
             Sign Up
           </button>
@@ -210,7 +216,7 @@ function CreateAccountInputField() {
           <button
             type="button"
             onClick={() => setIsSignUp(false)}
-            className="bg-green-btn border-0 text-white cursor-pointer font-medium px-8 py-2 rounded-md  border-green-600 hover:bg-green-dark  transition duration-300"
+            className="bg-[#20B658] border-0 text-white cursor-pointer font-medium text-xs  px-4 md:px-8  py-2 rounded-md  border-green-600 hover:bg-green-dark  transition duration-300"
           >
             Sign In
            

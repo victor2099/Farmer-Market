@@ -1,4 +1,3 @@
-// src/models/Product.ts
 import { Schema, model, Document } from "mongoose";
 
 export interface IProduct extends Document {
@@ -13,16 +12,15 @@ export interface IProduct extends Document {
 const productSchema = new Schema<IProduct>(
   {
     farmer: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    name: { type: String, required: true },
-    price: { type: Number, required: true },
-    quantity: { type: Number, required: true },
-    category: { type: String, required: true },
-    available: { type: Boolean, default: true },
+    name: { type: String, required: true, trim: true },
+    price: { type: Number, required: true, min: 0 },
+    quantity: { type: Number, required: true, min: 0 },
+    category: { type: String, required: true, trim: true, index: true },
+    available: { type: Boolean, default: true, index: true }
   },
-  { 
-    timestamps: true,
-    versionKey: false
-   }
+  { timestamps: true, versionKey: false }
 );
+
+productSchema.index({ name: "text" });
 
 export default model<IProduct>("Product", productSchema);

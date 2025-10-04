@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import Sidebar from "../components/dashboard-components/Sidebar";
+import BuyerSidebar from "../components/dashboard-components/BuyersSidebar";
 import Logo from "../assets/Logo-black.svg";
 
 import { Menu, Bell } from "lucide-react";
@@ -12,7 +12,8 @@ const BuyerDashboard = () => {
   return (
     <div className="min-h-screen flex">
       {/* SIDEBAR */}
-      <Sidebar open={open} onClose={() => setOpen(false)} />
+      <BuyerSidebar open={open} onClose={() => setOpen(false)} />
+      {/* <Sidebar open={open} onClose={() => setOpen(false)} /> */}
 
       {/* MAIN CONTENT */}
       <div className="flex-1 flex-col  ">
@@ -39,7 +40,7 @@ const BuyerDashboard = () => {
         </div>
 
         {/* OUTLET FOR NESTED ROUTES */}
-        <div className=" md:py-4 max-w-7xl mx-auto w-full ">
+        <div className=" md:py-4 max-w-5xl mx-auto w-full ">
           <Outlet />
         </div>
       </div>

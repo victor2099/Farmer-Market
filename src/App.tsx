@@ -13,10 +13,11 @@ import Overview from "./components/dashboard-components/Overview";
 
 import FarmBusinessDetails from "./pages/FarmBusinessDetails";
 import VerificationDetails from "./pages/VerificationDetails";
-import BankingPayment from "./pages/Signup";
+import BankingPayment from "./pages/BankingPayment";
 import SignPage from "./pages/SigninPage";
 import BuyerReg from "./pages/BuyerReg";
 import SuccessPage from "./pages/SuccessPage";
+import Signup2 from "./pages/Signup2";
 
 import VerificationCode from "./pages/VerificationCode";
 import Marketplace from "./pages/MarketplacePage";
@@ -24,6 +25,7 @@ import CartPage from "./pages/CartPage";
 import WalletPage from "./pages/WalletPage";
 import PaymentDetailsPage from "./pages/PaymentdetailsPage";
 import Withdrawal from "./pages/WithdrawalPage";
+import OrderTracking from "./pages/OrderTracking";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
 //function About() {
@@ -67,6 +69,12 @@ function App() {
         <Route path="buyerreg" element={<BuyerReg />} />
         <Route path="verificationcode" element={<VerificationCode />} />
         <Route path="successpage" element={<SuccessPage />} />
+        <Route path="buyerreg" element={<BuyerReg/>} />
+        <Route path="verificationcode" element={<VerificationCode/>} />
+        <Route path="successpage" element={<SuccessPage/>} />
+        <Route path="signup2" element={<Signup2/>} />
+        <Route path="ordertracking" element={<OrderTracking/>} />
+
 
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />

@@ -40,7 +40,7 @@ const BuyerDashboard = () => {
         </div>
 
         {/* OUTLET FOR NESTED ROUTES */}
-        <div className=" md:py-4 max-w-7xl mx-auto w-full ">
+        <div className=" md:py-4 max-w-5xl mx-auto w-full ">
           <Outlet />
         </div>
       </div>

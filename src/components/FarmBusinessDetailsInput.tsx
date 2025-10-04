@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/arrow-icon.svg";
 
 type BDAuth = {
   businessName: string;
@@ -46,9 +48,14 @@ function BusinessDetails() {
     }
 
   return (
-    <div className="mt-8 md:mt-0 md:pt-0 flex flex-col h-full">
-      <h1 className=" text-green-btn font-bold pb-2 mb-5 text-[20px] md:text-[32px]">Farm/Business Details</h1>
+    
+       <div className="mt-2 md:mt-0  flex flex-col h-full">
 
+        <div className="relative  gap-3 mb-6">
+        <Link to="/createaccount">
+        <img src={logo} className="w-6 absolute -left-8 md:-left-10 top-0.5 hover:opacity-50" alt="Back" /> </Link> 
+        <h1 className="  text-green-btn font-bold text-md sm:text-lg"> Farm/Business Details</h1>
+      </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         {/* Business Name */}

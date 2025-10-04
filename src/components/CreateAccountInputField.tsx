@@ -89,7 +89,7 @@ function CreateAccountInputField() {
     <div className="mt-2 md:mt-0  flex flex-col h-full">
 
       <div className="relative  gap-3 mb-6">
-     <Link to="/signup2">
+     <Link to="/signuphome">
      <img src={logo} className="w-6 absolute -left-8 md:-left-10 top-0.5 hover:opacity-50" alt="Back" /> </Link> 
      <h1 className="  text-green-btn font-bold text-md sm:text-lg"> Create Account</h1>
       </div>

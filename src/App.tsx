@@ -17,7 +17,7 @@ import BankingPayment from "./pages/BankingPayment";
 import SignPage from "./pages/SigninPage";
 import BuyerReg from "./pages/BuyerReg";
 import SuccessPage from "./pages/SuccessPage";
-import Signup2 from "./pages/Signup2";
+import SignupHome from "./pages/SignupHome";
 
 import VerificationCode from "./pages/VerificationCode";
 import Marketplace from "./pages/MarketplacePage";
@@ -47,6 +47,7 @@ function App() {
       {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="signupHome" element={<SignupHome/>} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/createaccount" element={<CreateAccountPage />} />
 
@@ -72,7 +73,7 @@ function App() {
         <Route path="buyerreg" element={<BuyerReg/>} />
         <Route path="verificationcode" element={<VerificationCode/>} />
         <Route path="successpage" element={<SuccessPage/>} />
-        <Route path="signup2" element={<Signup2/>} />
+        
         <Route path="ordertracking" element={<OrderTracking/>} />
 
 

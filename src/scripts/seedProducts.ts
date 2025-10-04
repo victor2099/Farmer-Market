@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
-import Product from "../models/product.schema";
+import Product from "../../backend/src/models/product.schema";
 
 async function main() {
   const uri = (process.env.MONGO_URI || process.env.MONGO_URL) as string;

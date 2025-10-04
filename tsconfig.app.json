@@ -24,5 +24,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "backend/src/controllers/product.controller.ts", "src/components/.tsx", "backend/src/middlewares/auth.adapter.ts", "backend/src/models/product.schema.ts"]
 }

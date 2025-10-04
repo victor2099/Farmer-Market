@@ -1,3 +1,4 @@
+
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Image1 from "../assets/Home-Images/Home-Img 1.svg";
@@ -9,6 +10,7 @@ import Image6 from "../assets/Home-Images/Home-Img 6.svg";
 import Image7 from "../assets/Home-Images/Home-Img 7.svg";
 import Image8 from "../assets/Home-Images/Home-Img 8.svg";
 import Image9 from "../assets/Home-Images/Home-Img 9.svg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -34,9 +36,11 @@ const Home = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
             inventore sit nobis quibusdam.
           </p>
+           <Link to="/marketplace">
           <button className="bg-sec text-black text-sm font-bold py-3 px-6 rounded-md hover:bg-sec2">
             Discover More
           </button>
+          </Link>
         </div>
       </section>
 
@@ -76,9 +80,11 @@ const Home = () => {
               </li>
             </ul>
             <div className="mt-6 md:mb-10">
+              <Link to="/marketplace">
               <button className=" bg-black inline-block text-white text-sm font-bold py-3 px-6 rounded-md">
                 Discover More
               </button>
+              </Link>
             </div>
           </div>
         </div>

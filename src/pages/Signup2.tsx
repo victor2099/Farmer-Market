@@ -7,7 +7,7 @@ import React from "react";
 const Signup2: React.FC = () => {
   return (
     <div
-      className="instrument-sans relative h-screen w-full bg-cover bg-center overflow-hidden" 
+      className="instrument-sans relative h-screen w-full bg-cover bg-center overflow-hidden"
       style={{
         backgroundImage: `url(${bgImage})`,
       }}
@@ -28,18 +28,22 @@ const Signup2: React.FC = () => {
 
       {/* Hero Section */}
       <div className="relative flex flex-col justify-center items-center sm:items-start h-[calc(100vh-72px)] px-8 md:px-16 gap-12 max-w-3xl">
-        <h1 className="text-4xl md:text-6xl font-instrument font-semibold text-white leading-snug tracking-tight">
+        <h1 className="text-4xl text-center sm:text-left w-full md:text-6xl font-instrument  font-semibold text-white leading-snug tracking-tight">
           Fresh Food From <br /> Farmers
         </h1>
 
-       <div className="flex flex-col sm:flex-row gap-6">
-          < Link to='/createaccount'> <button className="bg-sec hover:bg-sec2 text-black font-semibold px-6 py-3 rounded-lg shadow-lg transition">
-            Sign Up As Farmer
-          </button>
+        <div className="flex w-full flex-col sm:flex-row gap-6">
+          <Link to="/createaccount">
+            {" "}
+            <button className="bg-sec w-full sm:w-50 hover:bg-sec2 text-black font-semibold px-3 py-3 rounded-lg shadow-lg transition">
+              Sign Up As Farmer
+            </button>
           </Link>
-        <Link to='/signup' >    <button className="bg-sec hover:bg-sec2 text-black font-semibold px-6 py-3 rounded-lg shadow-lg transition">
-            Sign Up As Customer
-          </button>
+          <Link to="/signup">
+            {" "}
+            <button className="bg-sec w-full sm:w-50 hover:bg-sec2 text-black font-semibold px-3 py-3 rounded-lg shadow-lg transition">
+              Sign Up As Customer
+            </button>
           </Link>
         </div>
       </div>
@@ -48,4 +52,3 @@ const Signup2: React.FC = () => {
 };
 
 export default Signup2;
-

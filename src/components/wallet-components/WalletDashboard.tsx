@@ -21,12 +21,12 @@ const WalletDashboard = () => {
 
       {/* BUTTONS */}
       <div className="flex gap-5 mb-6 pt-6">
-        <NavLink to="/">
+        <NavLink to="/withdrawal">
           <button className=" inline-block border-1 border-pri bg-pri hover:bg-green-600 text-sm  text-white font-semibold text-center py-3 px-6 rounded-lg focus:outline-none transition">
             Withdraw Funds
           </button>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="/paymentdetails">
           <button className=" inline-block border-1 border-pri text-sm  text-black font-semibold text-center py-3 px-6 rounded-lg focus:outline-none transition">
             Payment details
           </button>

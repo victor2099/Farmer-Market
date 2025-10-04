@@ -19,7 +19,7 @@ type Props = {
   onClose: () => void;
 };
 
-const sectionTitle = ` font-bold text-sm text-gray-500 uppercase px-3 mt-4 mb-2`;
+const sectionTitle = ` font-bold text-sm text-gray-500 uppercase px-3 mt-3 mb-2`;
 
 const Sidebar = ({ open, onClose }: Props) => {
   const linkclass = ({ isActive }: { isActive: boolean }) =>
@@ -31,7 +31,7 @@ const Sidebar = ({ open, onClose }: Props) => {
     <>
       {/* BIG SCREEN SIDEBAR */}
       <aside className="font-dm-sans hidden sticky top-0 left-0 h-screen    md:flex md:flex-col md:w-64  ">
-        <div className="ml-6 my-5 ">
+        <div className="ml-6 mt-5 mb-3 ">
           <NavLink to="/" className="text-2xl   cursor-pointer">
             <img src={Logo} alt="logo" className="w-[100px] md:w-[150px]" />
           </NavLink>
@@ -39,7 +39,7 @@ const Sidebar = ({ open, onClose }: Props) => {
 
         {/* MAIN TAB */}
         <div className="flex-1 ">
-          <div className="pl-4 h-full pt-4 w-full text-sm  pb-5 bg-[#f5f5f5]">
+          <div className="pl-4 h-full w-full text-sm pt-1  pb-5 bg-[#f5f5f5]">
             <div className={sectionTitle}>Main</div>
             <nav className="flex flex-col gap-2 ml-3">
               <NavLink to="/buyerdashboard/overview" end className={linkclass}>

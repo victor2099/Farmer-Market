@@ -63,10 +63,10 @@ const WalletTable = () => {
         </table>
       </div>
 
-      {/* BUTTONS */}
+      {/* BUTTON */}
 
       <div className="mt-12 text-center">
-        <NavLink to="/farmerdashboard">
+        <NavLink to="farmer">
           <button className=" inline-block border-1 border-pri bg-pri hover:bg-green-600 text-sm  text-white font-semibold text-center py-3 px-8 rounded-lg focus:outline-none transition">
             Go to Dashboard
           </button>

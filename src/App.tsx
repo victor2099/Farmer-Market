@@ -22,6 +22,8 @@ import VerificationCode from "./pages/VerificationCode";
 import Marketplace from "./pages/MarketplacePage";
 import CartPage from "./pages/CartPage";
 import WalletPage from "./pages/WalletPage";
+import PaymentDetailsPage from "./pages/PaymentdetailsPage";
+import Withdrawal from "./pages/WithdrawalPage";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
 //function About() {
@@ -54,6 +56,8 @@ function App() {
         <Route path="/cartpage" element={<CartPage />} />
         <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/wallet" element={<WalletPage />} />
+        <Route path="/paymentdetails" element={<PaymentDetailsPage />} />
+        <Route path="/withdrawal" element={<Withdrawal />} />
 
         <Route path="/businessdetails" element={<FarmBusinessDetails />} />
         <Route path="verifyd" element={<VerificationDetails />} />

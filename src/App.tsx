@@ -26,6 +26,8 @@ import WalletPage from "./pages/WalletPage";
 import PaymentDetailsPage from "./pages/PaymentdetailsPage";
 import Withdrawal from "./pages/WithdrawalPage";
 import OrderTracking from "./pages/OrderTracking";
+import PaymentMethod from "./pages/PaymentMethodPage";
+import BuyerPaymentAcceptance from "./pages/BuyerPaymentAcceptancePage";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
 //function About() {
@@ -60,6 +62,11 @@ function App() {
         <Route path="/wallet" element={<WalletPage />} />
         <Route path="/paymentdetails" element={<PaymentDetailsPage />} />
         <Route path="/withdrawal" element={<Withdrawal />} />
+        <Route path="/paymentmethod" element={<PaymentMethod />} />
+        <Route
+          path="/buyerpaymentacceptance"
+          element={<BuyerPaymentAcceptance />}
+        />
 
         <Route path="/businessdetails" element={<FarmBusinessDetails />} />
         <Route path="verifyd" element={<VerificationDetails />} />
@@ -69,12 +76,11 @@ function App() {
         <Route path="buyerreg" element={<BuyerReg />} />
         <Route path="verificationcode" element={<VerificationCode />} />
         <Route path="successpage" element={<SuccessPage />} />
-        <Route path="buyerreg" element={<BuyerReg/>} />
-        <Route path="verificationcode" element={<VerificationCode/>} />
-        <Route path="successpage" element={<SuccessPage/>} />
-        <Route path="signup2" element={<Signup2/>} />
-        <Route path="ordertracking" element={<OrderTracking/>} />
-
+        <Route path="buyerreg" element={<BuyerReg />} />
+        <Route path="verificationcode" element={<VerificationCode />} />
+        <Route path="successpage" element={<SuccessPage />} />
+        <Route path="signup2" element={<Signup2 />} />
+        <Route path="ordertracking" element={<OrderTracking />} />
 
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />

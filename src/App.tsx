@@ -20,6 +20,11 @@ import SuccessPage from "./pages/SuccessPage";
 import Signup2 from "./pages/Signup2";
 
 import VerificationCode from "./pages/VerificationCode";
+import Marketplace from "./pages/MarketplacePage";
+import CartPage from "./pages/CartPage";
+import WalletPage from "./pages/WalletPage";
+import PaymentDetailsPage from "./pages/PaymentdetailsPage";
+import Withdrawal from "./pages/WithdrawalPage";
 import OrderTracking from "./pages/OrderTracking";
 
 // Example extra pages (create About.jsx, NotFound.jsx later)
@@ -50,11 +55,20 @@ function App() {
           <Route path="overview" element={<Overview />} />
         </Route>
 
+        <Route path="/cartpage" element={<CartPage />} />
+        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/wallet" element={<WalletPage />} />
+        <Route path="/paymentdetails" element={<PaymentDetailsPage />} />
+        <Route path="/withdrawal" element={<Withdrawal />} />
+
         <Route path="/businessdetails" element={<FarmBusinessDetails />} />
         <Route path="verifyd" element={<VerificationDetails />} />
         <Route path="bankingpayment" element={<BankingPayment />} />
         <Route path="farmer" element={<Dashboard />} />
         <Route path="signin" element={<SignPage />} />
+        <Route path="buyerreg" element={<BuyerReg />} />
+        <Route path="verificationcode" element={<VerificationCode />} />
+        <Route path="successpage" element={<SuccessPage />} />
         <Route path="buyerreg" element={<BuyerReg/>} />
         <Route path="verificationcode" element={<VerificationCode/>} />
         <Route path="successpage" element={<SuccessPage/>} />

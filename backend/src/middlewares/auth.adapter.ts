@@ -1,8 +1,9 @@
 import { Request, Response, NextFunction } from "express";
 import dotenv from "dotenv";
+
 dotenv.config();
 
-/** roles we use across the app */
+/** Roles used across the app */
 type Role = "farmer" | "buyer" | "logistics" | "admin";
 
 declare global {
@@ -12,44 +13,51 @@ declare global {
       _id?: string;
       role: Role;
       isVerified?: boolean;
-      // add extras if dev1 adds later
+      // add extras if needed later
     }
+
     interface Request {
       user?: UserPayload;
     }
   }
 }
 
+// Determine whether to use the stub middleware
 const USE_STUB = process.env.USE_AUTH_STUB === "true";
 
-let authMiddlewareReal: any;
-let authorizeRolesReal: any;
+let authMiddlewareReal: (req: Request, res: Response, next: NextFunction) => void;
+let authorizeRolesReal: (...roles: Role[]) => (req: Request, res: Response, next: NextFunction) => void;
 
 if (!USE_STUB) {
-  // dev1 real middleware
-  // path per your repo
-  const mod = require("../middleware/auth.middleware");
+  // Use real middleware (ensure the path is correct relative to this file)
+  const mod = require("./auth.middleware");
   authMiddlewareReal = mod.authMiddleware;
   authorizeRolesReal = mod.authorizeRoles;
 }
 
-// stub for local tests without token
+/** Stub auth middleware for local testing (when USE_AUTH_STUB=true) */
 function authMiddlewareStub(req: Request, res: Response, next: NextFunction) {
   const raw = req.header("x-dev-user");
-  if (!raw) return res.status(401).json({ message: "no x-dev-user header, or turn off USE_AUTH_STUB" });
+  if (!raw) {
+    return res
+      .status(401)
+      .json({ message: "No x-dev-user header provided, or turn off USE_AUTH_STUB" });
+  }
+
   try {
     req.user = JSON.parse(raw);
     next();
   } catch {
-    return res.status(400).json({ message: "bad x-dev-user json" });
+    return res.status(400).json({ message: "Invalid x-dev-user JSON" });
   }
 }
 
+/** Stub role authorizer for local testing */
 function authorizeRolesStub(...roles: Role[]) {
   return (req: Request, res: Response, next: NextFunction) => {
-    const u = req.user;
-    if (!u) return res.status(401).json({ message: "unauthorized" });
-    if (!roles.includes(u.role)) return res.status(403).json({ message: "forbidden" });
+    const user = req.user;
+    if (!user) return res.status(401).json({ message: "Unauthorized" });
+    if (!roles.includes(user.role)) return res.status(403).json({ message: "Forbidden" });
     next();
   };
 }

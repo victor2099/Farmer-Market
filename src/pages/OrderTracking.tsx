@@ -36,13 +36,15 @@ const OrderTracking: React.FC = () => {
   return (
     <div className="h-screen w-screen flex flex-col overflow-hidden bg-light font-dm-sans text-gray-800">
       {/* === Header === */}
-      <header className=" bg-pri text-white px-6 py-4 shadow-md
+      <header className=" bg-pri text-white px-6 py-4 shadow-md cursor-pointer
    
       ">
         <div className="flex items-center justify-between max-w-[1100px] flex-shrink-0   m-auto">
 
        
-        <img src={logo} alt="Logo" className="w-40 md:w-48 object-contain" />
+      <Link to='/'>
+      <img src={logo} alt="Logo" className="w-40 md:w-48 object-contain" />
+      </Link>  
 
         <div className="flex items-center gap-5 relative">
           {/* Notification */}

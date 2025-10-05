@@ -213,9 +213,11 @@ const CartPage = () => {
             <span>Total</span>
             <span>₦{total.toLocaleString()}</span>
           </div>
-          <button className="mt-auto bg-pri hover:bg-green-600  text-white font-semibold text-center w-full py-3 rounded-xl focus:outline-none transition">
-            Checkout Now
-          </button>
+          <NavLink to="/paymentmethod">
+            <button className="mt-auto bg-pri hover:bg-green-600  text-white font-semibold text-center w-full py-3 rounded-xl focus:outline-none transition">
+              Checkout Now
+            </button>
+          </NavLink>
 
           <NavLink
             to="/marketplace"

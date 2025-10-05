@@ -55,11 +55,11 @@ const VerificationCode = () => {
       
     
 
-      setSuccess("Code verified successfully ✅");
+      setSuccess("");
     
-       setTimeout(() => {
-        navigateVerify("/buyerdashboard");
-      }, 1500);
+       
+        navigateVerify("/successpage");
+  
 
     } catch (err: any) {
       setError(err.message);

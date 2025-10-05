@@ -4,9 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import bgImage from "../assets/woman-farm.png";
 import logo from "../assets/Logo 2.png";
 import backIcon from "../assets/arrow-icon.svg";
+import { useFarmerContext } from "../context/FarmerContext";
 
 
 const BuyerReg: React.FC = () => {
+
+   const {setPhone} = useFarmerContext()
+
 
    const navigate = useNavigate();
 
@@ -27,6 +31,8 @@ const BuyerReg: React.FC = () => {
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+ 
+  
  
   // Handle input changes
   const handleChange = (
@@ -96,6 +102,8 @@ const BuyerReg: React.FC = () => {
        setTimeout(() => {
         navigate("/verificationcode");
       }, 1500);
+
+      setPhone(form.phoneNumber)
 
 
     
@@ -243,7 +251,7 @@ const BuyerReg: React.FC = () => {
 
   {/* Optional Fields */}
   <div>
-    <label className="block text-sm font-medium">
+    <label className="block text-[16px] font-medium">
       Business Name <span className="text-gray-400">(optional)</span>
     </label>
     <input

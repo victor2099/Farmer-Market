@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 import backIcon from "../assets/arrow-icon.svg";
 
 type AuthenticateForm = {
@@ -9,10 +10,12 @@ type AuthenticateForm = {
   email: string;
   password: string;
   confirmPassword: string;
-  terms: boolean;
+  agreeToTerms: boolean;
 };
 
 function CreateAccountInputField() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState<AuthenticateForm>({
     firstName: "",
     lastName: "",
@@ -20,9 +23,10 @@ function CreateAccountInputField() {
     email: "",
     password: "",
     confirmPassword: "",
-    terms: false,
+    agreeToTerms: false,
   });
 
+  const [loading, setLoading] = useState(false);
   const [formInputError, setFormInputError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
@@ -34,37 +38,91 @@ function CreateAccountInputField() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setFormInputError(null);
+    setSuccess(null);
 
+    // 🔒 Validation
     if (
       !formData.firstName ||
       !formData.lastName ||
       !formData.phoneNumber ||
       !formData.email ||
       !formData.password ||
-      !formData.confirmPassword ||
-      !formData.terms
+      !formData.confirmPassword
     ) {
-      showError("All fields are required and Terms must be accepted!");
-      return;
+      return showError("All fields are required!");
+    }
+
+    if (!formData.agreeToTerms) {
+      return showError("You must accept the Terms of Use!");
     }
 
     if (formData.password !== formData.confirmPassword) {
-      showError("Passwords do not match!");
-      return;
+      return showError("Passwords do not match!");
     }
 
-    showSuccess("Account created successfully!");
-    setFormData({
-      firstName: "",
-      lastName: "",
-      phoneNumber: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      terms: false,
-    });
+    if (!/^\d{10,15}$/.test(formData.phoneNumber)) {
+      return showError("Phone number must be 10–15 digits.");
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      return showError("Please enter a valid email address.");
+    }
+
+    // ✅ Send data to API
+    try {
+      setLoading(true);
+
+      const response = await axios.post(
+        "http://localhost:3500/api/users/register/farmer",
+        {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          phoneNumber: formData.phoneNumber,
+          email: formData.email,
+          password: formData.password,
+          confirmPassword: formData.confirmPassword,
+          agreeToTerms: formData.agreeToTerms,
+        },
+        { headers: { "Content-Type": "application/json" } }
+      );
+
+      showSuccess(response.data?.message || "Account created successfully 🎉");
+
+      // ✅ Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phoneNumber: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        agreeToTerms: false,
+      });
+
+    
+      setTimeout(() => {
+        navigate("/businessdetails");
+      }, 1500);
+    } catch (error: any) {
+      console.error("Registration Error:", error);
+
+      if (axios.isAxiosError(error)) {
+        if (error.response) {
+          showError(error.response.data?.message || "Server error occurred");
+        } else if (error.request) {
+          showError("No response from server. Please check your connection.");
+        } else {
+          showError("Error setting up the request.");
+        }
+      } else {
+        showError("Unexpected error occurred. Please try again.");
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   const showError = (message: string) => {
@@ -96,7 +154,6 @@ function CreateAccountInputField() {
 
       {/* Form */}
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-sm">
-        {/* Inputs */}
         {[
           { name: "firstName", label: "First Name", type: "text" },
           { name: "lastName", label: "Last Name", type: "text" },
@@ -115,6 +172,7 @@ function CreateAccountInputField() {
               placeholder={`Enter ${field.label}`}
               value={(formData as any)[field.name]}
               onChange={handleChange}
+              required
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
             />
           </div>
@@ -124,8 +182,8 @@ function CreateAccountInputField() {
         <div className="flex items-center gap-2 mt-2 text-sm">
           <input
             type="checkbox"
-            name="terms"
-            checked={formData.terms}
+            name="agreeToTerms"
+            checked={formData.agreeToTerms}
             onChange={handleChange}
             className="accent-green-600 w-4 h-4"
           />
@@ -154,9 +212,12 @@ function CreateAccountInputField() {
         <div className="flex gap-3 pt-3">
           <button
             type="submit"
-            className="bg-[#20B658] text-white font-medium text-sm px-5 py-2 rounded-md hover:bg-green-700 transition duration-300"
+            disabled={loading}
+            className={`${
+              loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#20B658] hover:bg-green-700"
+            } text-white font-medium text-sm px-5 py-2 rounded-md transition duration-300`}
           >
-            Sign Up
+            {loading ? "Signing Up..." : "Sign Up"}
           </button>
 
           <Link to="/signin">

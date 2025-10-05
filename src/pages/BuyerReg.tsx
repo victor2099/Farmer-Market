@@ -76,7 +76,7 @@ const BuyerReg: React.FC = () => {
     try {
       validateForm();
 
-      // ✅ Send correct data keys for backend
+      //Send correct data keys for backend
       const payload = {
         fullName: form.fullName,
         phoneNumber: form.phoneNumber,
@@ -94,7 +94,7 @@ const BuyerReg: React.FC = () => {
 
       setMessage(res.data.message || "Account created successfully 🎉");
        setTimeout(() => {
-        navigate("/verifyd");
+        navigate("/verificationcode");
       }, 1500);
 
 

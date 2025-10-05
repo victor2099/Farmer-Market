@@ -16,7 +16,6 @@ const jwtExpiry: string = process.env.JWT_EXPIRATION || "1d";
 
 export const registerFarmer = async (req: Request, res: Response) => {
   try {
-     console.log("Received body:", req.body);
 
     const { firstName, lastName, phoneNumber, email, password, confirmPassword, agreeToTerms } = req.body;
 

@@ -11,7 +11,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noImplicitAny": false,
-    "types": ["node", "express"]
+    "types": ["node", "express"],
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]

@@ -1,94 +1,93 @@
-import React from "react";
 import BuyerRequestCard from "../components/dashboard-components/StatsCard";
 import Sidebar from "../components/dashboard-components/Sidebar";
 
 // Dummy data for demonstration
-const dummyRequests = [
-  {
-    id: "1",
-    name: "Chukwunonso Ikenna",
-    location: "Aba North, Abia",
-    distance: "2.5km away",
-    time: "10:16 AM",
-    items: [
-      { name: "Fresh Tomatoes", quantity: 10_000 },
-      { name: "Potatoes", quantity: 15_000 },
-      { name: "Beans", quantity: 5_000 },
-    ],
-    avatarUrl:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cfce54f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  {
-    id: "2",
-    name: "Nonso Ebuka",
-    location: "Demsa, Adamawa",
-    distance: "100km away",
-    time: "10:16 AM",
-    items: [
-      { name: "Fresh Tomatoes", quantity: 10_000 },
-      { name: "Potatoes", quantity: 15_000 },
-      { name: "Beans", quantity: 5_000 },
-    ],
-    avatarUrl:
-      "https://images.unsplash.com/photo-1520813792240-56ff42637edf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  {
-    id: "3",
-    name: "Daniel Chimsy",
-    location: "Bodija, Ibadan",
-    distance: "300km away",
-    time: "10:16 AM",
-    items: [
-      { name: "Fresh Tomatoes", quantity: 10_000 },
-      { name: "Potatoes", quantity: 15_000 },
-      { name: "Beans", quantity: 5_000 },
-    ],
-    avatarUrl:
-      "https://images.unsplash.com/photo-1507003211169-e69fe1c5a32b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  {
-    id: "4",
-    name: "Chukwunonso Ikenna",
-    location: "Aba North, Abia",
-    distance: "2.5km away",
-    time: "10:16 AM",
-    items: [
-      { name: "Fresh Tomatoes", quantity: 10_000 },
-      { name: "Potatoes", quantity: 15_000 },
-      { name: "Beans", quantity: 5_000 },
-    ],
-    avatarUrl:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cfce54f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  {
-    id: "5",
-    name: "Nonso Ebuka",
-    location: "Demsa, Adamawa",
-    distance: "100km away",
-    time: "10:16 AM",
-    items: [
-      { name: "Fresh Tomatoes", quantity: 10_000 },
-      { name: "Potatoes", quantity: 15_000 },
-      { name: "Beans", quantity: 5_000 },
-    ],
-    avatarUrl:
-      "https://images.unsplash.com/photo-1520813792240-56ff42637edf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  {
-    id: "6",
-    name: "Daniel Chimsy",
-    location: "Bodija, Ibadan",
-    distance: "300km away",
-    time: "10:16 AM",
-    items: [
-      { name: "Fresh Tomatoes", quantity: 10_000 },
-      { name: "Potatoes", quantity: 15_000 },
-      { name: "Beans", quantity: 5_000 },
-    ],
-    avatarUrl:
-      "https://images.unsplash.com/photo-1507003211169-e69fe1c5a32b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-];
+// const dummyRequests = [
+//   {
+//     id: "1",
+//     name: "Chukwunonso Ikenna",
+//     location: "Aba North, Abia",
+//     distance: "2.5km away",
+//     time: "10:16 AM",
+//     items: [
+//       { name: "Fresh Tomatoes", quantity: 10_000 },
+//       { name: "Potatoes", quantity: 15_000 },
+//       { name: "Beans", quantity: 5_000 },
+//     ],
+//     avatarUrl:
+//       "https://images.unsplash.com/photo-1535713875002-d1d0cfce54f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+//   },
+//   {
+//     id: "2",
+//     name: "Nonso Ebuka",
+//     location: "Demsa, Adamawa",
+//     distance: "100km away",
+//     time: "10:16 AM",
+//     items: [
+//       { name: "Fresh Tomatoes", quantity: 10_000 },
+//       { name: "Potatoes", quantity: 15_000 },
+//       { name: "Beans", quantity: 5_000 },
+//     ],
+//     avatarUrl:
+//       "https://images.unsplash.com/photo-1520813792240-56ff42637edf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+//   },
+//   {
+//     id: "3",
+//     name: "Daniel Chimsy",
+//     location: "Bodija, Ibadan",
+//     distance: "300km away",
+//     time: "10:16 AM",
+//     items: [
+//       { name: "Fresh Tomatoes", quantity: 10_000 },
+//       { name: "Potatoes", quantity: 15_000 },
+//       { name: "Beans", quantity: 5_000 },
+//     ],
+//     avatarUrl:
+//       "https://images.unsplash.com/photo-1507003211169-e69fe1c5a32b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+//   },
+//   {
+//     id: "4",
+//     name: "Chukwunonso Ikenna",
+//     location: "Aba North, Abia",
+//     distance: "2.5km away",
+//     time: "10:16 AM",
+//     items: [
+//       { name: "Fresh Tomatoes", quantity: 10_000 },
+//       { name: "Potatoes", quantity: 15_000 },
+//       { name: "Beans", quantity: 5_000 },
+//     ],
+//     avatarUrl:
+//       "https://images.unsplash.com/photo-1535713875002-d1d0cfce54f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+//   },
+//   {
+//     id: "5",
+//     name: "Nonso Ebuka",
+//     location: "Demsa, Adamawa",
+//     distance: "100km away",
+//     time: "10:16 AM",
+//     items: [
+//       { name: "Fresh Tomatoes", quantity: 10_000 },
+//       { name: "Potatoes", quantity: 15_000 },
+//       { name: "Beans", quantity: 5_000 },
+//     ],
+//     avatarUrl:
+//       "https://images.unsplash.com/photo-1520813792240-56ff42637edf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+//   },
+//   {
+//     id: "6",
+//     name: "Daniel Chimsy",
+//     location: "Bodija, Ibadan",
+//     distance: "300km away",
+//     time: "10:16 AM",
+//     items: [
+//       { name: "Fresh Tomatoes", quantity: 10_000 },
+//       { name: "Potatoes", quantity: 15_000 },
+//       { name: "Beans", quantity: 5_000 },
+//     ],
+//     avatarUrl:
+//       "https://images.unsplash.com/photo-1507003211169-e69fe1c5a32b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+//   },
+// ];
 
 function request() {
   return (
@@ -160,7 +159,7 @@ function request() {
       </section>
 
       {/* Buyer Request Cards Grid */}
-      <BuyerRequestCard />
+      <BuyerRequestCard title={""} value={""} icon={undefined} />
     </div>
   );
 }

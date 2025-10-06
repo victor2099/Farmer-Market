@@ -13,5 +13,5 @@ export default defineConfig(({ mode }) => ({
     }),
     tailwindcss(),
   ],
-  base: mode === "production" ? "/Farmer-market/" : "/",
+  base: mode === "production" ? "/Farmer-Market/" : "/",
 }));

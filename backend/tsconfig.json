@@ -10,9 +10,7 @@
     "skipLibCheck": true,                 
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "noImplicitAny": false,
-    "types": ["node", "express"],
-    "ignoreDeprecations": "6.0"
+    "noImplicitAny": false
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]

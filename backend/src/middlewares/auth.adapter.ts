@@ -25,8 +25,14 @@ declare global {
 // Determine whether to use the stub middleware
 const USE_STUB = process.env.USE_AUTH_STUB === "true";
 
-let authMiddlewareReal: (req: Request, res: Response, next: NextFunction) => void;
-let authorizeRolesReal: (...roles: Role[]) => (req: Request, res: Response, next: NextFunction) => void;
+let authMiddlewareReal: (req: Request, res: Response, next: NextFunction) => void = (req, res, next) => {
+  throw new Error("authMiddlewareReal is not initialized. Set USE_AUTH_STUB=false and ensure auth.middleware is available.");
+};
+let authorizeRolesReal: (...roles: Role[]) => (req: Request, res: Response, next: NextFunction) => void = () => {
+  return (req, res, next) => {
+    throw new Error("authorizeRolesReal is not initialized. Set USE_AUTH_STUB=false and ensure auth.middleware is available.");
+  };
+};
 
 if (!USE_STUB) {
   // Use real middleware (ensure the path is correct relative to this file)

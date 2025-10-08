@@ -8,6 +8,7 @@ import cors from "cors";
 import userRoutes from "./routes/user.routes"
 import adminRoutes from "./routes/admin.route";
 import productRoutes from "./routes/product.routes";
+const host = '0.0.0.0';
 
 
 
@@ -36,6 +37,6 @@ app.use('/api/users', userRoutes);
 app.use("/api/admin", adminRoutes);
 
 
-app.listen(PORT,'0.0.0.0' () => {
+app.listen(PORT, host, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
